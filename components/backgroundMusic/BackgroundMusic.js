@@ -1,18 +1,21 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { Howl, Howler } from 'howler';
 
 const BackgroundMusic = ({ src, volume }) => {
-  const [audio] = useState(new Audio(src));
+  const [audio] = useState(new Howl({
+    src: [src],
+    volume: volume,
+    loop: true,
+    autoplay: true
+  }));
 
   useEffect(() => {
-    audio.loop = true;
-    audio.volume = volume;
-    audio.play();
+    audio.volume(volume);
 
     return () => {
-      audio.pause();
-      audio.currentTime = 0;
+      audio.stop();
     };
   }, [audio, volume]);
 
