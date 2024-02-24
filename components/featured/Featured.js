@@ -68,7 +68,7 @@ const Featured = ({ title }) => {
     const [properties, setProperties] = useState(fakeData);
 
   return (
-    <section className="bg-gray-100">
+    <section className={`bg-gray-100`}>
       <div className="container mx-auto py-24 px-16">
         <div className="text-center mb-20">
           <span className="text-sm font-bold text-primary uppercase leading-10">Our Properties</span>

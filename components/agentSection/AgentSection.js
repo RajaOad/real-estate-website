@@ -31,7 +31,7 @@ const agents = [
 
 const AgentSection = () => {
   return (
-    <section className="ftco-section ftco-agent ftco-no-pb py-24 bg-agents">
+    <section className={`py-24 bg-agents`}>
       <div className="container mx-auto px-20">
         <div className="flex flex-col pl-20 pb-6">
           <span className="text-white text-xs uppercase font-semibold tracking-widest mb-1">Meet Our Agents</span>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section className="mx-24 py-24">
+    <section className={`mx-24 py-24`}>
       <div className="container-xl">
         <div className="grid grid-cols-1 gap-5 md:grid-cols-6">
           <div className="md:col-span-2 relative">
