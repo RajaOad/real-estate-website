@@ -53,7 +53,7 @@ const Footer = () => {
           <h2 className="text-xl font-semibold mb-8">Quick Links</h2>
           <ul className="text-sm">
             <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Terms & Conditions</a></li>
-            <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Users Guide</a></li>
+            <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>User&apos;s Guide</a></li>
             <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Support Center</a></li>
             <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Press Info</a></li>
           </ul>
