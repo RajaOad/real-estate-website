@@ -4,6 +4,8 @@ import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import { FaQuoteLeft } from 'react-icons/fa'
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 const TestimonialSection = () => {
   const testimonials = [
@@ -46,9 +48,23 @@ const TestimonialSection = () => {
     // Add more fake testimonials as needed
   ];
 
+  const { ref, inView } = useInView({triggerOnce: false });
+
+  const variants = {
+    visible: (i)=> ( { opacity: 1, y:0, 
+        // transition:{type:"spring", stiffness:100, damping:100}
+        transition:{
+            // staggerChildren: 0.2
+            delay:i * 0.3,
+            duration:0.8
+        }
+     }),
+    hidden: { opacity: 0, y:80, },
+}
+
   return (
     <section className="py-24 bg-[#f7f7f7]">
-      <div className="container-xl mx-4 md:mx-20">
+      <div className="container-xl mx-4 md:mx-20" ref={ref}>
         <div className="row justify-content-center pb-4">
           <div className="col-md-7 text-center heading-section">
             <span className="subheading uppercase text-xs md:text-sm font-semibold text-primary">Testimonial</span>
@@ -77,7 +93,12 @@ const TestimonialSection = () => {
               }}
             >
               {testimonials.map((testimonial, index) => (
-                <SplideSlide key={index}>
+
+                <SplideSlide key={index} >
+                                  <motion.div variants={variants} custom={index}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                >
                   <div className="flex justify-center my-12 relative">
                     <div className="testimony-wrap bg-white p-8 rounded-lg shadow-md">
                       <div className="p-4 bg-primary absolute left-5 -top-5 rounded-full text-white"><FaQuoteLeft /></div>
@@ -93,6 +114,7 @@ const TestimonialSection = () => {
                       </div>
                     </div>
                   </div>
+                  </motion.div>
                 </SplideSlide>
               ))}
             </Splide>

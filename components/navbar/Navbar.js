@@ -4,7 +4,7 @@ import MobileMenu from './MobileMenu'
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center absolute w-full top-0 py-2 px-8 z-40 bg-[#001F5B] bg-opacity-10 backdrop-filter">
+    <nav className="flex justify-between items-center absolute w-full top-0 py-2 px-24 z-40 bg-[#001F5B] bg-opacity-10 backdrop-filter">
     <div className="flex items-center">
       {/* Logo */}
       <img src="/images/logo.png" alt="Logo" className="h-12 md:h-20 mr-4" />

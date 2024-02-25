@@ -6,16 +6,16 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
 
-    const { ref, inView } = useInView({triggerOnce: false });
+    const { ref, inView } = useInView({ triggerOnce: false });
 
     const variants = {
-      hidden: { opacity: 0, y: 80 },
-      visible: { opacity: 1, y: 0, transition: { duration: 1.2, delay: 0.5 } }
+        hidden: { opacity: 0, y: 80 },
+        visible: { opacity: 1, y: 0, transition: { duration: 1.2, delay: 0.5 } }
     };
-  
+
     const titleVariants = {
-      hidden: { opacity: 0, y: 80 },
-      visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.3 } }
+        hidden: { opacity: 0, y: 80 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.3 } }
     };
 
     const slides = [
@@ -67,20 +67,22 @@ const Hero = () => {
                                 <div className="flex justify-center">
                                     <div className="w-10/12 md:w-8/12 xl:w-6/12">
                                         <motion.div className="text-center text-white"
-                                         variants={titleVariants}
-                                         initial="hidden"
-                                         animate={inView ? "visible" : "hidden"}
+                                            variants={titleVariants}
+                                            initial="hidden"
+                                            animate={inView ? "visible" : "hidden"}
                                         >
                                             <h2 className="text-3xl md:text-7xl mb-16">{slide.title}</h2>
                                             <p className="mb-16 leading-8">{slide.description}</p>
                                         </motion.div>
-                                        <motion.div className='flex justify-center gap-2 font-bold'
-                                         variants={variants}
-                                         initial="hidden"
-                                         animate={inView ? "visible" : "hidden"}
+                                        <motion.div className='flex justify-center gap-2 md:gap-4 font-bold'
+                                            variants={variants}
+                                            initial="hidden"
+                                            animate={inView ? "visible" : "hidden"}
                                         >
-                                            <button className='py-3 px-6 text-xs md:text-base md:py-4 md:px-8 bg-[#f0f0f0] text-secondary'>Buy Properties</button>
-                                            <button className='py-3 px-6 text-xs md:text-base md:py-4 md:px-8 bg-primary text-white'>Rent Properties</button>
+                                            <button className='py-3 px-6 text-xs md:text-base md:py-4 md:px-8 bg-[#f0f0f0] text-[#6b7280] hover:bg-gray-300 hover:text-[#374151] transition duration-300 ease-in-out transform hover:scale-105'>Buy Properties</button>
+                                            <button className='py-3 px-6 text-xs md:text-base md:py-4 md:px-8 bg-[#001F5B] text-white hover:bg-blue-700 hover:text-white transition duration-300 ease-in-out transform hover:scale-105'>Rent Properties</button>
+
+
                                         </motion.div>
                                     </div>
                                 </div>
