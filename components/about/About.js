@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
 
 const About = () => {
-  const { ref, inView } = useInView({ triggerOnce: true });
+  const { ref, inView } = useInView({ triggerOnce: false });
 
   const variants = {
     hidden: { opacity: 0, y: 80 },
@@ -56,7 +56,7 @@ const About = () => {
                 <div className="counter-wrap">
                   <div className="text">
                     <span className="d-block number gradient-text text-2xl md:text-4xl font-semibold">
-                      <CountUp start={inView ? 0 : null} end={50} duration={2} />
+                      <CountUp start={inView ? 0 : null} end={50} duration={2} delay={1} />
                     </span>
                     <p className='uppercase text-xs md:text-sm text-primary font-semibold pt-3'>Years of Experienced</p>
                   </div>
@@ -64,7 +64,7 @@ const About = () => {
                 <div className="counter-wrap">
                   <div className="text">
                     <span className="d-block number gradient-text text-2xl md:text-4xl font-semibold">
-                      <CountUp start={inView ? 0 : null} end={210000} duration={2} separator="," />
+                      <CountUp start={inView ? 0 : null} end={210000} duration={2} delay={1} separator="," />
                     </span>
                     <p className='uppercase text-xs md:text-sm text-primary font-semibold pt-3'>Total Properties</p>
                   </div>
@@ -72,7 +72,7 @@ const About = () => {
                 <div className="counter-wrap">
                   <div className="text">
                     <span className="d-block number gradient-text text-2xl md:text-4xl font-semibold">
-                      <CountUp start={inView ? 0 : null} end={450} duration={2} />
+                      <CountUp start={inView ? 0 : null} end={450} duration={2} delay={1} />
                     </span>
                     <p className='uppercase text-xs md:text-sm text-primary font-semibold pt-3'>Qualified Realtors</p>
                   </div>
@@ -80,7 +80,7 @@ const About = () => {
                 <div className="counter-wrap">
                   <div className="text">
                     <span className="d-block number gradient-text text-2xl md:text-4xl font-semibold">
-                      <CountUp start={inView ? 0 : null} end={100} duration={2} />
+                      <CountUp start={inView ? 0 : null} end={100} duration={2} delay={1} />
                     </span>
                     <p className='uppercase text-xs md:text-sm text-primary font-semibold pt-3'>Total Branches</p>
                   </div>
