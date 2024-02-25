@@ -2,6 +2,8 @@
 import React from 'react'
 import PropertyCard from '../propertyCard/PropertyCard'
 import { useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 const fakeData = [
     {
@@ -67,20 +69,43 @@ const fakeData = [
 const Featured = ({ title }) => {
     const [properties, setProperties] = useState(fakeData);
 
+    const { ref, inView } = useInView();
+
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } }
+  };
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.3 } }
+  };
+
   return (
-    <section className={`bg-gray-100`}>
-      <div className="container mx-auto py-24 px-16">
-        <div className="text-center mb-20">
-          <span className="text-sm font-bold text-primary uppercase leading-10">Our Properties</span>
-          <h2 className="text-3xl md:text-5xl text-gray-500 font-semibold mb-4">{title}</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {properties.map(property => (
-            <PropertyCard key={property.id} property={property} />
-          ))}
-        </div>
-      </div>
-    </section>
+    <section className="bg-gray-100">
+    <div className="container mx-auto py-24 px-16" ref={ref}>
+      <motion.div className="text-center mb-20" 
+      variants={titleVariants}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      >
+        <span className="text-sm font-bold text-primary uppercase leading-10">Our Properties</span>
+        <h2 className="text-3xl md:text-5xl text-gray-500 font-semibold mb-4">{title}</h2>
+      </motion.div>
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        variants={variants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+      >
+        {properties.map((property) => (
+          <motion.div key={property.id} variants={variants} className="opacity-0">
+            <PropertyCard property={property} />
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  </section>
   )
 }
 

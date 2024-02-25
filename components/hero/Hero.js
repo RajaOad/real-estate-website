@@ -1,8 +1,22 @@
 "use client"
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
+
+    const { ref, inView } = useInView();
+
+    const variants = {
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } }
+    };
+  
+    const titleVariants = {
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.3 } }
+    };
 
     const slides = [
         {
@@ -49,17 +63,25 @@ const Hero = () => {
                     <SplideSlide key={index}>
                         <div className="absolute inset-0 bg-black opacity-40 h-[50rem]"></div>
                         <div className="img flex items-center bg-cover justify-center w-full h-[50rem] " style={{ backgroundImage: slide.backgroundImage }}>
-                            <div className="container-xl relative z-10">
+                            <div className="container-xl relative z-10" ref={ref}>
                                 <div className="flex justify-center">
                                     <div className="w-10/12 md:w-8/12 xl:w-6/12">
-                                        <div className="text-center text-white">
+                                        <motion.div className="text-center text-white"
+                                         variants={titleVariants}
+                                         initial="hidden"
+                                         animate={inView ? "visible" : "hidden"}
+                                        >
                                             <h2 className="text-3xl md:text-7xl mb-16">{slide.title}</h2>
                                             <p className="mb-16 leading-8">{slide.description}</p>
-                                        </div>
-                                        <div className='flex justify-center gap-2 font-bold'>
+                                        </motion.div>
+                                        <motion.div className='flex justify-center gap-2 font-bold'
+                                         variants={variants}
+                                         initial="hidden"
+                                         animate={inView ? "visible" : "hidden"}
+                                        >
                                             <button className='py-4 px-8 bg-[#f0f0f0] text-secondary'>Buy Properties</button>
                                             <button className='py-4 px-8 bg-primary text-white'>Rent Properties</button>
-                                        </div>
+                                        </motion.div>
                                     </div>
                                 </div>
                             </div>
