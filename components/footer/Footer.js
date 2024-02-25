@@ -7,9 +7,10 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-20 py-16 md:pt-28 md:pb-20 flex md:flex-row flex-wrap justify-center">
         <div className="md:w-1/5">
           <div className="mb-10 mr-8">
-            <div className='mb-8'>
-            <h2 className="text-2xl font-semibold leading-6">BAITUL SHABEERAN</h2>
-            <p className='text-xs font-semibold'>Real Estate Agency</p>
+            <div className='mb-4'>
+            <img src="/images/logo3.png" alt="Logo" className="h-20 md:h-24" />
+            {/* <h2 className="text-2xl font-semibold leading-6">BAITUL SHABEERAN</h2>
+            <p className='text-xs font-semibold'>Real Estate Agency</p> */}
             </div>
             <p className="text-sm mb-4 text-footer">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
             <ul className="flex">

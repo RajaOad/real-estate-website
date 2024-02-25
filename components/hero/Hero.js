@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
 
-    const { ref, inView } = useInView({triggerOnce: true });
+    const { ref, inView } = useInView({triggerOnce: false });
 
     const variants = {
       hidden: { opacity: 0, y: 80 },
