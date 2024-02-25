@@ -4,7 +4,7 @@ const IntroSection = () => {
   return (
     <section className="py-12 md:py-24 relative bg-cover bg-center" style={{backgroundImage: "url(images/h4.jpg)"}}>
     <div className="overlay inset-0 bg-intro bg-opacity-90 absolute top-0 left-0 w-full h-full"></div>
-    <div className="container-xl mx-8 md:mx-24">
+    <div className="container-xl mx-4 md:mx-24">
       <div className="grid grid-cols-1">
         <div className="col-lg-10 col-xl-8">
           <div className="flex flex-col md:flex-row md:justify-evenly">

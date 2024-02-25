@@ -32,8 +32,8 @@ const agents = [
 const AgentSection = () => {
   return (
     <section className={`py-24 bg-agents`}>
-      <div className="container mx-auto px-8 md:px-20">
-        <div className="flex flex-col text-cente md:text-startr md:pl-20 pb-6">
+      <div className="container mx-auto px-4 md:px-20">
+        <div className="flex flex-col text-center md:text-start md:pl-20 pb-6">
           <span className="text-white text-xs uppercase md:font-semibold md:mb-1">Meet Our Agents</span>
           <h2 className="text-3xl md:text-5xl font-semibold text-secondary mt-4 mb-16">Our Agents</h2>
         </div>

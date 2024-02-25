@@ -23,7 +23,7 @@ const About = () => {
   };
 
   return (
-    <section className={` px-8 md:mx-24 py-24`}>
+    <section className={` px-4 md:mx-24 py-24`}>
       <div className="container-xl" ref={ref}>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-6">
           <motion.div className="md:col-span-2 relative"

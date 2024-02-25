@@ -83,7 +83,7 @@ const Featured = ({ title }) => {
 
   return (
     <section className="bg-gray-100">
-    <div className="container mx-auto py-24 px-8 md:px-16" ref={ref}>
+    <div className="container mx-auto py-24 px-4 md:px-16" ref={ref}>
       <motion.div className="text-center mb-20" 
       variants={titleVariants}
       initial="hidden"
