@@ -48,7 +48,7 @@ const TestimonialSection = () => {
     // Add more fake testimonials as needed
   ];
 
-  const { ref, inView } = useInView({triggerOnce: false });
+  const { ref, inView } = useInView({triggerOnce: true });
 
   const variants = {
     visible: (i)=> ( { opacity: 1, y:0, 

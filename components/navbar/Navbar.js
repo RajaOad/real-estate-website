@@ -11,7 +11,7 @@ const Navbar = () => {
       {/* <h1 className="text-white text-sm md:text-lg font-bold"><span className='bg-primary text-white rounded-full py-2 px-6'>BAITUL SHABEERAN</span> <span className='hidden md:inline'>Real Estate</span></h1> */}
     </div>
     <div className='hidden md:block'>
-    <div className="flex items-center space-x-6">
+    <div className="flex items-center space-x-6 font-semibold">
       {/* Navbar Links */}
       <Link href="/" className="text-white hover:text-gray-300">HOME</Link>
       <Link href="/about" className="text-white hover:text-gray-300">ABOUT</Link>
