@@ -81,6 +81,18 @@ const Featured = ({ title }) => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.3 } }
   };
 
+  const variants2 = {
+    visible: (i)=> ( { opacity: 1, y:0, 
+        // transition:{type:"spring", stiffness:100, damping:100}
+        transition:{
+            // staggerChildren: 0.2
+            delay:i * 0.3,
+            duration:0.8
+        }
+     }),
+    hidden: { opacity: 0, y:80, },
+}
+
   return (
     <section className="bg-gray-100">
     <div className="container mx-auto py-24 px-4 md:px-16" ref={ref}>
@@ -98,8 +110,11 @@ const Featured = ({ title }) => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
-        {properties.map((property) => (
-          <motion.div key={property.id} variants={variants} className="opacity-0">
+        {properties.map((property, index) => (
+          <motion.div key={property.id} variants={variants2} custom={index} className="opacity-0"
+          initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+          >
             <PropertyCard property={property} />
           </motion.div>
         ))}
