@@ -48,11 +48,11 @@ const TestimonialSection = () => {
 
   return (
     <section className="py-24 bg-[#f7f7f7]">
-      <div className="container-xl mx-20">
+      <div className="container-xl mx-8 md:mx-20">
         <div className="row justify-content-center pb-4">
           <div className="col-md-7 text-center heading-section">
-            <span className="subheading uppercase text-sm font-semibold text-primary">Testimonial</span>
-            <h2 className="mb-3 text-5xl font-semibold text-secondary pt-4 pb-2">Clients We Help</h2>
+            <span className="subheading uppercase text-xs md:text-sm font-semibold text-primary">Testimonial</span>
+            <h2 className="mb-3 text-3xl md:text-5xl font-semibold text-secondary pt-4 pb-2">Clients We Help</h2>
           </div>
         </div>
         <div className="row">

@@ -55,7 +55,7 @@ const fakeData = [
       agentImage: 'images/h4.jpg',
       agentName: 'Sophia Brown',
       ago: '5 days ago',
-      title: 'Modern Condo in Downtown',
+      title: 'Modern Condo',
       location: 'Chicago',
       type: 'rent',
       beds: 1,
@@ -69,7 +69,7 @@ const fakeData = [
 const Featured = ({ title }) => {
     const [properties, setProperties] = useState(fakeData);
 
-    const { ref, inView } = useInView({triggerOnce: true });
+    const { ref, inView } = useInView({triggerOnce: false });
 
   const variants = {
     hidden: { opacity: 0, y: 80 },
@@ -83,13 +83,13 @@ const Featured = ({ title }) => {
 
   return (
     <section className="bg-gray-100">
-    <div className="container mx-auto py-24 px-16" ref={ref}>
+    <div className="container mx-auto py-24 px-8 md:px-16" ref={ref}>
       <motion.div className="text-center mb-20" 
       variants={titleVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       >
-        <span className="text-sm font-bold text-primary uppercase leading-10">Our Properties</span>
+        <span className="text-xs md:text-sm font-bold text-primary uppercase leading-10">Our Properties</span>
         <h2 className="text-3xl md:text-5xl text-gray-500 font-semibold mb-4">{title}</h2>
       </motion.div>
       <motion.div

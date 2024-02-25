@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
 
-    const { ref, inView } = useInView({triggerOnce: true });
+    const { ref, inView } = useInView({triggerOnce: false });
 
     const variants = {
       hidden: { opacity: 0, y: 80 },
@@ -79,8 +79,8 @@ const Hero = () => {
                                          initial="hidden"
                                          animate={inView ? "visible" : "hidden"}
                                         >
-                                            <button className='py-4 px-8 bg-[#f0f0f0] text-secondary'>Buy Properties</button>
-                                            <button className='py-4 px-8 bg-primary text-white'>Rent Properties</button>
+                                            <button className='py-3 px-6 text-sm md:text-base md:py-4 md:px-8 bg-[#f0f0f0] text-secondary'>Buy Properties</button>
+                                            <button className='py-3 px-6 text-sm md:text-base md:py-4 md:px-8 bg-primary text-white'>Rent Properties</button>
                                         </motion.div>
                                     </div>
                                 </div>
