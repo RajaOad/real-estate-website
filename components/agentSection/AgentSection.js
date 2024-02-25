@@ -3,8 +3,6 @@
 import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { FaTwitter, FaFacebook, FaGoogle, FaInstagram } from 'react-icons/fa';
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
 
 // Fake data for agents
 const agents = [
@@ -32,22 +30,9 @@ const agents = [
 ];
 
 const AgentSection = () => {
-  const { ref, inView } = useInView({triggerOnce: true });
-
-  const variants = {
-    visible: (i)=> ( { opacity: 1, y:0, 
-        // transition:{type:"spring", stiffness:100, damping:100}
-        transition:{
-            // staggerChildren: 0.2
-            delay:i * 0.3,
-            duration:0.8
-        }
-     }),
-    hidden: { opacity: 0, y:80, },
-}
   return (
     <section className={`py-24 bg-agents`}>
-      <div className="container mx-auto px-4 md:px-20" ref={ref}>
+      <div className="container mx-auto px-4 md:px-20">
         <div className="flex flex-col text-center md:text-start md:pl-20 pb-6">
           <span className="text-white text-xs uppercase md:font-semibold md:mb-1">Meet Our Agents</span>
           <h2 className="text-3xl md:text-5xl font-semibold text-secondary mt-4 mb-16">Our Agents</h2>
@@ -78,10 +63,6 @@ const AgentSection = () => {
         >
           {agents.map((agent, index) => (
             <SplideSlide key={index}>
-               <motion.div variants={variants} custom={index}
-                initial="hidden"
-                animate={inView ? "visible" : "hidden"}
-                >
               <div className="flex flex-col justify-center bg-primary">
                 <img src={agent.image} className="w-full h-72 mb-4" alt={agent.name} />
                 <div className="pb-8 pt-4 pl-8">
@@ -112,7 +93,6 @@ const AgentSection = () => {
                   </ul>
                 </div>
               </div>
-              </motion.div>
             </SplideSlide>
           ))}
         </Splide>
