@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import MobileMenu from './MobileMenu'
 
 const Navbar = () => {
   return (
@@ -20,6 +21,7 @@ const Navbar = () => {
       <Link href="/contact" className="text-white hover:text-gray-300">CONTACT</Link>
     </div>
     </div>
+    <MobileMenu />
   </nav>
   )
 }
