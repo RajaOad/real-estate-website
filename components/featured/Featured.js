@@ -69,16 +69,16 @@ const fakeData = [
 const Featured = ({ title }) => {
     const [properties, setProperties] = useState(fakeData);
 
-    const { ref, inView } = useInView();
+    const { ref, inView } = useInView({triggerOnce: false });
 
   const variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } }
+    hidden: { opacity: 0, y: 80 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1.2, delay: 0.5 } }
   };
 
   const titleVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.3 } }
+    hidden: { opacity: 0, y: 80 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.3 } }
   };
 
   return (

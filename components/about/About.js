@@ -6,20 +6,20 @@ import { motion } from 'framer-motion';
 
 const About = () => {
 
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({triggerOnce: false });
 
   const variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } }
+    hidden: { opacity: 0, y: 80 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 1 } }
   };
 
   const titleVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.3 } }
+    hidden: { opacity: 0, y: 80 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.5 } }
   };
-  const leftVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.3 } }
+  const variants2 = {
+    hidden: { opacity: 0, y: 80 },
+    visible: { opacity: 1, y: 0, transition: { duration: 2, delay: 1.5 } }
   };
 
   return (
@@ -40,7 +40,7 @@ const About = () => {
             animate={inView ? "visible" : "hidden"}
             >
             <span className="subheading uppercase font-bold mb-4 text-sm text-primary">About Us</span>
-            <h2 className="mb-4 text-5xl font-semibold text-secondary leading-[4rem]"><span className='bg-primary text-white rounded-full py-2 px-6'>BAITUL SHABEERAN</span> A Real Estate Company</h2>
+            <h2 className="my-4 text-5xl font-semibold text-secondary leading-[4rem]"><span className='bg-primary text-white rounded-full py-2 px-6'>BAITUL SHABEERAN</span> A Real Estate Company</h2>
             <p className="mb-6 text-secondary leading-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
             </motion.div>
             <motion.div className="grid grid-cols-1 gap-5 md:grid-cols-1 py-8"
@@ -76,7 +76,7 @@ const About = () => {
               </div>
             </motion.div>
             <motion.div className="img img-2 mt-8 w-full h-96 bg-cover" style={{backgroundImage: "url(images/h2.jpg)"}}
-            variants={variants}
+            variants={variants2}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             ></motion.div>
