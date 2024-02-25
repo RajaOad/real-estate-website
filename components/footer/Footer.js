@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="md:w-1/5">
           <div className="mb-10 mr-8">
             <div className='mb-4'>
-            <img src="/images/logo3.png" alt="Logo" className="h-20 md:h-24" />
+            <img src="/images/logo.png" alt="Logo" className="h-20 md:h-24" />
             {/* <h2 className="text-2xl font-semibold leading-6">BAITUL SHABEERAN</h2>
             <p className='text-xs font-semibold'>Real Estate Agency</p> */}
             </div>
