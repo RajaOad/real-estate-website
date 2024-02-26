@@ -32,26 +32,25 @@ const agents = [
 ];
 
 const AgentSection = () => {
-  const { ref, inView } = useInView({ triggerOnce: true });
+  const { ref, inView } = useInView({triggerOnce: true });
 
   const variants = {
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.3,
-        duration: 0.8,
-      },
-    }),
-    hidden: { opacity: 0, y: 80 },
-  };
-
+    visible: (i)=> ( { opacity: 1, y:0, 
+        // transition:{type:"spring", stiffness:100, damping:100}
+        transition:{
+            // staggerChildren: 0.2
+            delay:i * 0.3,
+            duration:0.8
+        }
+     }),
+    hidden: { opacity: 0, y:80, },
+}
   return (
-    <section className={`py-24 bg-gradient-to-r from-blue-400 to-purple-500`} >
+    <section className={`py-24 bg-agents`} >
       <div className="container mx-auto px-4 md:px-20" ref={ref}>
         <div className="flex flex-col text-center md:text-start md:pl-20 pb-6">
           <span className="text-white text-xs uppercase md:font-semibold md:mb-1">Meet Our Agents</span>
-          <h2 className="text-3xl md:text-5xl font-semibold text-white mt-4 mb-16">Our Agents</h2>
+          <h2 className="text-3xl md:text-5xl font-semibold text-secondary mt-4 mb-16">Our Agents</h2>
         </div>
         <Splide
           options={{
@@ -79,37 +78,40 @@ const AgentSection = () => {
         >
           {agents.map((agent, index) => (
             <SplideSlide key={index}>
-              <motion.div variants={variants} custom={index}>
-                <div className="flex flex-col justify-center bg-white rounded-lg shadow-lg p-6">
-                  <img src={agent.image} className="w-full h-72 mb-4 object-cover rounded-lg" alt={agent.name} />
-                  <div className="pb-8 pt-4 pl-8">
-                    <p className="text-sm text-gray-600 uppercase">Listing <span className="font-semibold">{agent.properties}</span> Properties</p>
-                    <h3 className="text-xl font-semibold text-gray-900 my-3"><a href="#" className="text-blue-500 hover:underline">{agent.name}</a></h3>
-                    <ul className="flex space-x-4">
-                      <li>
-                        <a href="#" className="text-gray-600 hover:text-blue-500 transition duration-300">
-                          <FaTwitter className="w-6 h-6" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="text-gray-600 hover:text-blue-500 transition duration-300">
-                          <FaFacebook className="w-6 h-6" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="text-gray-600 hover:text-blue-500 transition duration-300">
-                          <FaGoogle className="w-6 h-6" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="text-gray-600 hover:text-blue-500 transition duration-300">
-                          <FaInstagram className="w-6 h-6" />
-                        </a>
-                      </li>
-                      {/* Add more social icons as needed */}
-                    </ul>
-                  </div>
+               <motion.div variants={variants} custom={index}
+                // initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                >
+              <div className="flex flex-col justify-center bg-primary">
+                <img src={agent.image} className="w-full h-72 mb-4" alt={agent.name} />
+                <div className="pb-8 pt-4 pl-8">
+                  <p className="text-sm text-white uppercase">Listing <span className="font-semibold">{agent.properties}</span> Properties</p>
+                  <h3 className="text-xl font-semibold text-white my-3"><a href="#">{agent.name}</a></h3>
+                  <ul className="flex space-x-4">
+                    <li>
+                      <a href="#" className="text-white transition duration-300 hover:text-gray-500">
+                        <FaTwitter className="w-6 h-6" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-white transition duration-300 hover:text-gray-500">
+                        <FaFacebook className="w-6 h-6" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-white transition duration-300 hover:text-gray-500">
+                        <FaGoogle className="w-6 h-6" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-white transition duration-300 hover:text-gray-500">
+                        <FaInstagram className="w-6 h-6" />
+                      </a>
+                    </li>
+                    {/* Add more social icons as needed */}
+                  </ul>
                 </div>
+              </div>
               </motion.div>
             </SplideSlide>
           ))}

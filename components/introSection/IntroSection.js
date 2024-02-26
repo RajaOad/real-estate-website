@@ -7,7 +7,7 @@ const IntroSection = () => {
       <div className="container-xl mx-4 md:mx-24">
         <div className="grid grid-cols-1">
           <div className="col-lg-10 col-xl-8">
-            <div className="flex flex-col md:flex-row md:justify-between items-center">
+            <div className="flex flex-col md:flex-row md:justify-around items-center">
               <div className="flex items-center z-10 mb-8 md:mb-0">
                 <div className='text-center md:text-start'>
                   <h1 className="mb-0 text-white text-3xl md:text-5xl font-bold">Find Your Dream Home</h1>

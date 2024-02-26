@@ -80,7 +80,7 @@ const Hero = () => {
                                             animate={inView ? "visible" : "hidden"}
                                         >
                                             <button className='py-3 px-6 text-xs md:text-base md:py-4 md:px-8 bg-[#f0f0f0] text-[#6b7280] hover:bg-gray-300 hover:text-[#374151] transition duration-300 ease-in-out transform hover:scale-105'>Buy Properties</button>
-                                            <button className='py-3 px-6 text-xs md:text-base md:py-4 md:px-8 bg-primary text-white transition duration-300 ease-in-out transform hover:scale-105'>Rent Properties</button>
+                                            <button className='py-3 px-6 text-xs md:text-base md:py-4 md:px-8 bg-[#001F5B] text-white hover:bg-blue-700 hover:text-white transition duration-300 ease-in-out transform hover:scale-105'>Rent Properties</button>
 
 
                                         </motion.div>
