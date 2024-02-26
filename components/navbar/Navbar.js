@@ -11,14 +11,14 @@ const Navbar = () => {
       {/* <h1 className="text-white text-sm md:text-lg font-bold"><span className='bg-primary text-white rounded-full py-2 px-6'>BAITUL SHABEERAN</span> <span className='hidden md:inline'>Real Estate</span></h1> */}
     </div>
     <div className='hidden md:block'>
-    <div className="flex items-center space-x-6 font-semibold">
+    <div className="flex items-center space-x-2 font-semibold">
       {/* Navbar Links */}
-      <Link href="/" className="text-white hover:text-gray-300">HOME</Link>
-      <Link href="/about" className="text-white hover:text-gray-300">ABOUT</Link>
-      <Link href="/properties" className="text-white hover:text-gray-300">PROPERTIES</Link>
-      <Link href="/agents" className="text-white hover:text-gray-300">AGENTS</Link>
-      <Link href="/blog" className="text-white hover:text-gray-300">BLOG</Link>
-      <Link href="/contact" className="text-white hover:text-gray-300">CONTACT</Link>
+      <Link href="/" className="text-white hover:text-gray-300 hover:bg-[#001F5B] px-4 py-3 transition duration-500">HOME</Link>
+      <Link href="/about" className="text-white hover:text-gray-300 hover:bg-[#001F5B] px-4 py-3 transition duration-500">ABOUT</Link>
+      <Link href="/properties" className="text-white hover:text-gray-300 hover:bg-[#001F5B] px-4 py-3 transition duration-500">PROPERTIES</Link>
+      <Link href="/agents" className="text-white hover:text-gray-300 hover:bg-[#001F5B] px-4 py-3 transition duration-500">AGENTS</Link>
+      <Link href="/blog" className="text-white hover:text-gray-300 hover:bg-[#001F5B] px-4 py-3 transition duration-500">BLOG</Link>
+      <Link href="/contact" className="text-white hover:text-gray-300 hover:bg-[#001F5B] px-4 py-3 transition duration-500">CONTACT</Link>
     </div>
     </div>
     <MobileMenu />

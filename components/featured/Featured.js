@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 const Featured = ({ title, properties }) => {
     // const [properties, setProperties] = useState(fakeData);
 
-    const { ref, inView } = useInView({triggerOnce: false });
+    const { ref, inView } = useInView({triggerOnce: true });
 
   const variants = {
     hidden: { opacity: 0, y: 80 },

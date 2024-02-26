@@ -96,7 +96,7 @@ const TestimonialSection = () => {
 
                 <SplideSlide key={index} >
                                   <motion.div variants={variants} custom={index}
-                initial="hidden"
+                // initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 >
                   <div className="flex justify-center my-12 relative">

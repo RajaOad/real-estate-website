@@ -46,7 +46,7 @@ const AgentSection = () => {
     hidden: { opacity: 0, y:80, },
 }
   return (
-    <section className={`py-24 bg-agents`}>
+    <section className={`py-24 bg-agents`} >
       <div className="container mx-auto px-4 md:px-20" ref={ref}>
         <div className="flex flex-col text-center md:text-start md:pl-20 pb-6">
           <span className="text-white text-xs uppercase md:font-semibold md:mb-1">Meet Our Agents</span>
@@ -79,7 +79,7 @@ const AgentSection = () => {
           {agents.map((agent, index) => (
             <SplideSlide key={index}>
                <motion.div variants={variants} custom={index}
-                initial="hidden"
+                // initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 >
               <div className="flex flex-col justify-center bg-primary">

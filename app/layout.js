@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-      <BackgroundMusic src="/music/music.mpeg" volume={0.1} />
+      {/* <BackgroundMusic src="/music/music.mpeg" volume={0.1} /> */}
         <Navbar />
         {children}
         <Footer />
