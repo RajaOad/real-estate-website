@@ -3,12 +3,24 @@
 @tailwind utilities;
 
 .bg-primary {
-    background-color: #001F5B;
+    /* background-color: #001F5B; */
+    background: linear-gradient(to right, #3182CE, #9B2CBA);
 }
 
 .bg-intro {
-    background-color: #001F5B;
+    /* background-color: #001F5B; */
+    background: linear-gradient(to right, #3182CE, #9B2CBA);
+
     opacity: 0.9;
+}
+
+.bg-navlinks {
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.bg-navlinks:hover {
+    background: linear-gradient(to right, #3182CE, #9B2CBA);
 }
 
 .bg-agents {

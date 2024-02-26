@@ -1,6 +1,7 @@
 
 import About from '@/components/about/About'
 import AgentSection from '@/components/agentSection/AgentSection'
+import CallToAction from '@/components/callToAction/CallToAction'
 import Featured from '@/components/featured/Featured'
 import Hero from '@/components/hero/Hero'
 import IntroSection from '@/components/introSection/IntroSection'
@@ -76,6 +77,7 @@ const Home = () => {
     <IntroSection />
     <TestimonialSection />
     <AgentSection />
+    <CallToAction />
     </>
   )
 }
