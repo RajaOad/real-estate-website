@@ -7,15 +7,15 @@ import BackgroundMusic from "@/components/backgroundMusic/BackgroundMusic";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "BAITUL SHABEERAN Real Estate Agency",
-  description: "BAITUL SHABEERAN Real Estate Agency",
+  title: "BAITUL SHABEERAN",
+  description: "BAITUL SHABEERAN A Real Estate and Construction Agency",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-      {/* <BackgroundMusic src="/music/music.mpeg" volume={0.1} /> */}
+      <BackgroundMusic src="/music/music.mpeg" volume={0.1} />
         <Navbar />
         {children}
         <Footer />

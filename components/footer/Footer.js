@@ -72,7 +72,7 @@ const Footer = () => {
       </div>
         <div className="text-center text-xs md:text-sm md:w-full md:mt-5 bg-agents px-4 py-8 md:px-20 md:py-10" style={{ color: 'rgba(255, 255, 255, 0.5)' }}>
           <p className="md:mb-3">
-            Copyright &copy; 2024 All rights reserved | This website is made by <a href="https://raj-portfolio-henna.vercel.app/" target="_blank" className='uppercase'>Developer</a>
+          Copyright &copy; 2024 All rights reserved | BAITUL SHABEERAN
           </p>
         </div>
     </footer>
