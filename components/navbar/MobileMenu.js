@@ -10,12 +10,13 @@ const MobileMenu = () => {
     setIsOpen(!isOpen);
   };
 
+
   return (
-    <div className={`md:hidden w-full bg-[#001F5B] ${isOpen ? "bg-opacity-90": "bg-opacity-0"} backdrop-filter transition-all duration-300 absolute top-0 right-0`}>
-      <div className="flex justify-end">
+    <>
+          <div className="flex justify-end z-50 md:hidden">
         <button
           onClick={toggleMenu}
-          className="text-white focus:outline-none focus:text-white px-4 py-2"
+          className="text-white focus:outline-none focus:text-white border border-white px-3 py-2"
         >
           {isOpen ? (
             <svg
@@ -44,8 +45,11 @@ const MobileMenu = () => {
           )}
         </button>
       </div>
+
+    <div className={`md:hidden w-full bg-[#001F5B] ${isOpen ? "bg-opacity-90 top-0": "bg-opacity-0 -top-96"} backdrop-filter transition-all duration-500 absolute right-0`}>
+
       {isOpen && (
-        <div className="mt-2 flex flex-col justify-center items-center">
+        <div className="py-4 flex flex-col justify-center items-center">
           <Link href="/">
             <span className="block text-white hover:text-gray-300 py-2">
               HOME
@@ -79,6 +83,7 @@ const MobileMenu = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

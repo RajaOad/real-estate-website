@@ -1,3 +1,4 @@
+import HeroSection from '@/components/heroSection/HeroSection';
 import React from 'react';
 import { FaMapMarkerAlt, FaBed, FaBath, FaRegCalendarAlt } from 'react-icons/fa';
 
@@ -9,7 +10,7 @@ const PropertyDetailsPage = () => {
     type: 'Apartment',
     location: 'Belmont Gardens, Chicago',
     address: '123 Main St, Chicago, IL 60601',
-    description: 'Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet...',
+    description: 'Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet.',
     area: '120 sqft',
     rooms: 7,
     baths: 2,
@@ -25,9 +26,13 @@ const PropertyDetailsPage = () => {
   };
 
   return (
-    <div className="container mx-auto pt-24 pb-12 md:pt-48 md:pb-24">
+    <>
+
+<HeroSection backgroundImage={"/images/h1.jpg"} title={"Property"} />
+
+    <div className="container mx-auto py-12 md:pt-48 md:pb-24">
       {/* Big Property Image */}
-      <div className="mb-12 mx-4 md:mx-0 bg-gray-100 rounded-lg overflow-hidden">
+      <div className="mb-6 md:mb-12 mx-4 md:mx-0 bg-gray-100 rounded-lg overflow-hidden">
         <img src="/images/h1.jpg" alt="Property" className="w-full md:h-[40rem] object-cover object-center" />
       </div>
 
@@ -126,6 +131,7 @@ const PropertyDetailsPage = () => {
 
       </div>
     </div>
+    </>
   );
 };
 

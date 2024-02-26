@@ -10,11 +10,11 @@ const HeroSection = ({ backgroundImage, breadcrumbs, title }) => {
       <div className="z-20">
       <div className='flex justify-center text-white mb-8'>
       <span className="mr-2 hover:text-[#001F5B] transition duration-300">
-        <Link href="/" className='flex items-center uppercase'>Home <span className="mr-1"><FaChevronRight /></span></Link>
+        <Link href="/" className='flex items-center text-xs md:text-base uppercase'>Home <span className="mr-1"><FaChevronRight /></span></Link>
       </span>
-      <span className='flex items-center uppercase'>{title} <span className="mr-1"><FaChevronRight /></span></span>
+      <span className='flex items-center text-xs md:text-base uppercase'>{title} <span className="mr-1"><FaChevronRight /></span></span>
       </div>
-            <h1 className="text-7xl font-semibold text-white">{title}</h1>
+            <h1 className="text-5xl md:text-7xl font-semibold text-white">{title}</h1>
       </div>
     </section>
   );
