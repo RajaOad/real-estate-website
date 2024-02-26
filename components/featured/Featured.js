@@ -43,7 +43,7 @@ const Featured = ({ title, properties }) => {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       >
-        <span className="text-xs md:text-sm font-bold text-primary uppercase leading-10">Properties</span>
+        <span className="text-xs md:text-sm font-bold text-primary uppercase leading-10">Our Properties</span>
         <h2 className="text-3xl md:text-5xl text-gray-500 font-semibold mb-4">{title}</h2>
       </motion.div>
       <motion.div
