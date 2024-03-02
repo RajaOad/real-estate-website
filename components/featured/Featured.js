@@ -28,7 +28,7 @@ const Featured = () => {
         }
       } catch (error) {
         
-        console.log(error.message)
+        // console.log(error.message)
       } finally {
         setLoading(false);
       }
