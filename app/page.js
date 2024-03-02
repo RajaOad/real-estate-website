@@ -11,7 +11,7 @@ import React from 'react'
 const Home = () => {
   const fakeData = [
     {
-      id: 1,
+      _id: 1,
       image: 'images/h1.jpg',
       price: '$300,000',
       agentImage: 'images/h1.jpg',
@@ -25,7 +25,7 @@ const Home = () => {
       sqft: '1,878 sqft'
     },
     {
-      id: 2,
+      _id: 2,
       image: 'images/h2.jpg',
       price: '$1,500/month',
       agentImage: 'images/h2.jpg',
@@ -72,7 +72,7 @@ const Home = () => {
   return (
     <>
     <Hero />
-    <Featured title="Featured Properties" properties={fakeData} />
+    <Featured />
     <About />
     <IntroSection />
     <TestimonialSection />

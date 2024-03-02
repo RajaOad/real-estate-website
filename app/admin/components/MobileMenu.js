@@ -2,11 +2,9 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { useAuth } from '@/providers/AuthProvider';
 
-const MobileMenu = () => {
+const MobileMenu = ({ signOut }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { user, signOut } = useAuth();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -15,7 +13,7 @@ const MobileMenu = () => {
 
   return (
     <>
-          <div className="flex justify-end z-50 md:hidden">
+          <div className="flex bg-primary justify-end z-50 md:hidden">
         <button
           onClick={toggleMenu}
           className="text-white focus:outline-none focus:text-white border border-white px-3 py-2"
@@ -57,40 +55,34 @@ const MobileMenu = () => {
               Home
             </span>
           </Link>
-         
-          <Link href="/about">
+          <Link href="/admin">
             <span className="block text-white hover:text-gray-300 py-2">
-              About
+              Dashboard
             </span>
           </Link>
-          <Link href="/properties">
+          <Link href="/admin/addproperty">
             <span className="block text-white hover:text-gray-300 py-2">
-              Properties
+            Add Property
             </span>
           </Link>
-          <Link href="/agents">
+          <Link href="/admin/properties">
             <span className="block text-white hover:text-gray-300 py-2">
-              Agents
+            Your Propeties
             </span>
           </Link>
-          <Link href="/blog">
+          <Link href="/admin/profile">
             <span className="block text-white hover:text-gray-300 py-2">
-              Blog
+            Profile
             </span>
           </Link>
-          <Link href="/contact">
+          <Link href="/admin/settings">
             <span className="block text-white hover:text-gray-300 py-2">
-              Contact
+            Settings
             </span>
           </Link>
-          {user.admin && <Link href="/admin">
+          <button onClick={()=> signOut()}>
             <span className="block text-white hover:text-gray-300 py-2">
-            Dashboard
-            </span>
-          </Link>}
-          <button onClick={()=> signOut()} >
-            <span className="block text-white hover:text-gray-300 py-2">
-              Logout
+            Log out
             </span>
           </button>
         </div>
