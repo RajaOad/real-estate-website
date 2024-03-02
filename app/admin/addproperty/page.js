@@ -341,7 +341,7 @@ console.log(propertyData)
   <label className="block text-lg font-semibold mb-2">Upload Images</label>
   <div {...getRootProps()} className="w-full bg-white border-dotted border-4 border-gray-400 rounded-lg p-4 md:p-8 mb-8 cursor-pointer flex flex-col items-center justify-center shadow-lg">
     <input {...getInputProps()} />
-    <p className="text-gray-600 text-xs md:text-base text-center">Drag 'n' drop some files here, or click to select files</p>
+    <p className="text-gray-600 text-xs md:text-base text-center">Drag &apos;n&apos; drop some files here, or click to select files</p>
   </div>
   {/* Display image previews */}
   <div className="grid grid-cols-4 gap-4">

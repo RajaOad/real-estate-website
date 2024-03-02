@@ -297,7 +297,7 @@ const SettingsPage = () => {
             {({ getRootProps, getInputProps }) => (
               <div {...getRootProps()} className="w-full bg-white border-dotted border-4 border-gray-400 rounded-lg p-8 mb-6 cursor-pointer flex flex-col items-center justify-center shadow-lg">
                 <input {...getInputProps()} />
-                <p className="text-gray-600 text-center">Drag 'n' drop profile image here, or click to select files</p>
+                <p className="text-gray-600 text-center">Drag &apos;n&apos; drop profile image here, or click to select files</p>
               </div>
             )}
           </Dropzone>
@@ -322,7 +322,7 @@ const SettingsPage = () => {
             {({ getRootProps, getInputProps }) => (
               <div {...getRootProps()} className="w-full bg-white border-dotted border-4 border-gray-400 rounded-lg p-8 mb-6 cursor-pointer flex flex-col items-center justify-center shadow-lg">
                 <input {...getInputProps()} />
-                <p className="text-gray-600 text-center">Drag 'n' drop background image here, or click to select files</p>
+                <p className="text-gray-600 text-center">Drag &apos;n&apos; drop background image here, or click to select files</p>
               </div>
             )}
           </Dropzone>
