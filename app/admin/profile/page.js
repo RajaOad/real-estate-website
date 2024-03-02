@@ -6,7 +6,7 @@ import React, { useEffect } from 'react'
 import { FaPhone, FaEnvelope, FaWhatsapp, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 
-const page = () => {
+const Page = () => {
 
     const { authenticated, user } = useAuth()
     const router = useRouter()
@@ -74,4 +74,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

@@ -5,7 +5,7 @@ import PropertyCard from '@/components/propertyCard/PropertyCard'
 import PropertyCardSkeleton from '@/components/propertyCardSkeleton/PropertyCardSkeleton'
 import React, { useEffect, useState } from 'react'
 
-const page = () => {
+const Page = () => {
   const [properties, setProperties] = useState([]);
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -103,4 +103,4 @@ const page = () => {
   )
 }
 
-export default page 
+export default Page 
