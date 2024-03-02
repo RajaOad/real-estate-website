@@ -86,7 +86,7 @@ if (errorMsg) {
         <span className="text-xs md:text-sm font-bold text-primary uppercase leading-10">Our Properties</span>
         <h2 className="text-3xl md:text-5xl text-gray-500 font-semibold mb-4">Featured Properties</h2>
       </div>
-      <div className='text-center md:text-2xl text-red-500 font-bold mt-4'>{errorMsg}</div>
+      <div className='text-center md:text-2xl text-red-500 font-bold mt-4'>No featured properties</div>
     </div>
   </section>
 }

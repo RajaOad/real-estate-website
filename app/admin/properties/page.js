@@ -139,7 +139,7 @@ const Page = () => {
       <div className="text-center" >
         <h2 className="text-3xl md:text-5xl font-semibold mb-4">Properties</h2>
       </div>
-<div className='flex justify-center items-center text-3xl mt-32 font-semibold text-red-500'>{errorMsg}</div>
+<div className='flex justify-center items-center text-3xl mt-32 font-semibold text-red-500'>No properties available</div>
     </div>
   </section>
         </>
