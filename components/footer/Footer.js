@@ -5,8 +5,8 @@ import { FaTwitter, FaFacebook, FaInstagram, FaPhone, FaPaperPlane, FaChevronRig
 const Footer = () => {
   return (
     <footer className="bg-footer text-white">
-      <div className="container mx-auto px-4 md:px-20 py-16 md:pt-28 md:pb-20 flex md:flex-row flex-wrap justify-center">
-        <div className="md:w-1/5">
+      <div className="container mx-auto px-4 md:px-20 py-16 md:pt-28 md:pb-20 flex md:flex-row flex-wrap md:flex-nowrap justify-between items-center">
+        <div className="w-1/2 md:w-full md:pr-24">
           <div className="mr-8">
             <div className='mb-4'>
             <img src="/images/logo.png" alt="Logo" className="h-20 md:h-24" />
@@ -33,7 +33,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="w-2/4 md:w-1/5">
+        <div className="w-1/2 md:w-full">
           <h2 className="text-lg md:text-xl font-semibold mb-4 md:mb-8">Offers</h2>
           <ul className="text-xs md:text-sm">
             <li className="mb-3"><Link href="/properties" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Properties</Link></li>
@@ -42,7 +42,7 @@ const Footer = () => {
             <li className="mb-3"><Link href="/contact" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Clients Support</Link></li>
           </ul>
         </div>
-        <div className="w-2/4 md:w-1/5">
+        <div className="w-1/2 md:w-full">
           <h2 className="text-lg md:text-xl font-semibold mb-4 md:mb-8">Company</h2>
           <ul className="text-xs md:text-sm">
             <li className="mb-3"><Link href="/" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Home</Link></li>
@@ -60,7 +60,7 @@ const Footer = () => {
             <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Press Info</a></li>
           </ul>
         </div> */}
-        <div className="md:pb-10 w-2/4 md:w-1/5 mt-6 md:mt-0">
+        <div className="md:pb-10 w-1/2 md:w-full mt-6 md:mt-0">
           <h2 className="text-lg md:text-xl font-semibold mb-4 md:mb-8">Have a Question?</h2>
           <div className="block-23 mb-3">
             <ul>

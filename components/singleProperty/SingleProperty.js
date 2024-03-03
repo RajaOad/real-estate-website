@@ -3,10 +3,9 @@
 
 import { format } from 'date-fns';
 import React, { useState } from 'react';
-import { FaMapMarkerAlt, FaBed, FaBath, FaRegCalendarAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaBed, FaBath, FaRegCalendarAlt, FaTwitter, FaFacebook, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const SingleProperty = ({ propertyDetails }) => {
-
   const [selectedImage, setSelectedImage] = useState(propertyDetails.images[0]);
 
   const handlePreviewHover = (image) => {
@@ -95,22 +94,56 @@ const SingleProperty = ({ propertyDetails }) => {
                 </div>
               </div>
 
-              {/* Gallery */}
-              <div>
-                <h4 className="text-lg md:text-xl font-semibold mb-2">From Our Gallery</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {propertyDetails.images.map((image, index) => (
-                    <div key={index}>
-                      <img src={image} alt={`Gallery ${index + 1}`} className="w-full h-auto rounded-lg shadow-lg" />
-                    </div>
-                  ))}
-                </div>
-              </div>
+
             </div>
           </div>
 
           <div className="lg:w-4/12 md:w-full px-4">
-            <div className="bg-white shadow-md rounded-lg p-6 mb-8">
+
+          <div className="flex flex-col items-center justify-center bg-primary rounded-lg shadow-md p-6 mb-8">
+  <p className="text-lg font-semibold text-white mb-4">Contact for Booking</p>
+  <div className="flex justify-center w-full mb-4">
+    <img src={propertyDetails.userId.profileImage ? propertyDetails.userId.profileImage : 'https://placehold.co/400x450'} className="w-full h-auto rounded-lg object-cover" alt={propertyDetails.userId.username} />
+  </div>
+  <p className="text-lg font-semibold text-white mb-1">{propertyDetails.userId.username}</p>
+  {propertyDetails.userId.whatsapp && (
+    <p className="text-white text-sm mb-1">WhatsApp: <a href={`https://wa.me/${propertyDetails.userId.whatsapp}`} className="text-blue-400 hover:underline">{propertyDetails.userId.whatsapp}</a></p>
+  )}
+  {propertyDetails.userId.contactNumber && (
+    <p className="text-white text-sm mb-1">Contact Number: {propertyDetails.userId.contactNumber}</p>
+  )}
+  {propertyDetails.userId.email && (
+    <p className="text-white text-sm mb-4">Email: <a href={`mailto:${propertyDetails.userId.email}`} className="text-blue-400 hover:underline">{propertyDetails.userId.email}</a></p>
+  )}
+  <ul className="flex space-x-4">
+    <li>
+      <a href={propertyDetails.userId.links?.twitter || '#'} className="text-white transition duration-300 hover:text-gray-500">
+        <FaTwitter className="w-6 h-6" />
+      </a>
+    </li>
+    <li>
+      <a href={propertyDetails.userId.links?.facebook || '#'} className="text-white transition duration-300 hover:text-gray-500">
+        <FaFacebook className="w-6 h-6" />
+      </a>
+    </li>
+    <li>
+      <a href={propertyDetails.userId.links?.linkedin || '#'} className="text-white transition duration-300 hover:text-gray-500">
+        <FaLinkedin className="w-6 h-6" />
+      </a>
+    </li>
+    <li>
+      <a href={`mailto:${propertyDetails.userId.email}`} className="text-white transition duration-300 hover:text-gray-500">
+        <FaEnvelope className="w-6 h-6" />
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+            {/* <div className="bg-white shadow-md rounded-lg p-6 mb-8">
               <h4 className="text-lg md:text-xl font-bold mb-4">Drop Message For Booking</h4>
               <form action="#" className="space-y-6">
                 <input type="text" name="yourname" placeholder="Your Name*" className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 text-xs md:text-base placeholder-gray-400" />
@@ -118,7 +151,7 @@ const SingleProperty = ({ propertyDetails }) => {
                 <textarea name="yourmessage" placeholder="Write Message..." rows="5" className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 text-xs md:text-base placeholder-gray-400"></textarea>
                 <button type="submit" className="btn theme-btn-1 w-full py-3 px-4 bg-[#001F5B] text-white rounded-lg hover:bg-blue-700 transition duration-300 text-xs md:text-base font-bold">Send Message</button>
               </form>
-            </div>
+            </div> */}
 
             {propertyDetails.mapLocation && <div className="bg-white shadow-md rounded-lg p-6 mb-8">
               <h4 className="text-lg md:text-xl font-bold mb-4">Location</h4>
@@ -136,6 +169,9 @@ const SingleProperty = ({ propertyDetails }) => {
             </div>}
 
           </div>
+
+
+
 
         </div>
       </div>

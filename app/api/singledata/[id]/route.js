@@ -7,7 +7,7 @@ export const GET = async (req, { params }) => {
     const { id } = params;
 
     // Fetch the property by ID from the database
-    const property = await Property.findById(id);
+    const property = await Property.findById(id).populate('userId');;
 
     // If property not found, return a response with 404 status
     if (!property) {
