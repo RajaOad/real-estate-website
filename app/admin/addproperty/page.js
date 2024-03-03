@@ -112,7 +112,7 @@ console.log(propertyData)
       });
       }
     } catch (error) {
-      console.error('Error adding property:', error);
+      console.error('Error adding property:', JSON.stringify(error));
       setLoading(false)
     }
   };
