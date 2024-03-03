@@ -58,6 +58,7 @@ const Page = () => {
         } catch (error) {
           // Handle any errors that occurred during the fetch operation
           console.error('Error fetching properties');
+          setErrorMsg('An error occurred while fetching properties')
         } finally {
           setLoadingCard(false)
         }
