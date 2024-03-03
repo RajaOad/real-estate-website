@@ -165,6 +165,9 @@ const SettingsPage = () => {
       }
     } catch (error) {
       console.error('Error updating user:', error);
+      toast.error('An error occurred while updating user please try again later', {
+        position: "top-right",
+    });
       // Handle error appropriately, such as displaying an error message to the user
     } finally {
       setLoading(false);

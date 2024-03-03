@@ -113,6 +113,9 @@ console.log(propertyData)
       }
     } catch (error) {
       console.error('Error adding property:', JSON.stringify(error));
+      toast.error('An error occurred while adding property please try again later', {
+        position: "top-right",
+    });
       setLoading(false)
     }
   };
