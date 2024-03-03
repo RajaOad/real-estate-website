@@ -105,14 +105,14 @@ console.log(propertyData)
           position: "top-right",
       });
       } else {
-        console.error('Failed to add property:', response.statusText);
+       
         setLoading(false)
         toast.error(res.msg, {
           position: "top-right",
       });
       }
     } catch (error) {
-      console.error('Error adding property:', JSON.stringify(error));
+      
       toast.error('An error occurred while adding property please try again later', {
         position: "top-right",
     });
@@ -147,7 +147,7 @@ console.log(propertyData)
         }, 
         (error) => {
           // Handle unsuccessful uploads
-           console.error('Error uploading file:', error);
+          //  console.error('Error uploading file:', error);
           reject(error);
         }, 
         () => {

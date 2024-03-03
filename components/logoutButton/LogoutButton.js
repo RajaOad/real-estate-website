@@ -18,12 +18,8 @@ const LogoutButton = () => {
         duration: 5000 // Milliseconds
       });
   
-      // Redirect the user to the login page upon successful logout
       router.push('/signin');
     } catch (error) {
-      // If an error occurs during logout, display an error message
-      console.error('Logout failed:', error);
-  
       toast.error('Logout failed. Please try again.', {
         position: 'top-right',
         duration: 5000 // Milliseconds

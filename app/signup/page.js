@@ -56,38 +56,40 @@ const handleSignUpEmailPassword = async (e) => {
           });
       }
   } catch (error) {
-      console.error('Error signing up:', error);
-
+    toast.error('An error occurred while signing up please try again later', {
+      position: "top-right",
+      
+  });
   } finally {
     setLoading(false);
   }
 };
 
-const handleGoogleSignUp = async () => {
-  try {
-      const result = await signIn('google', { callbackUrl: '/' });
-      if (!result.error) {
-          // Google sign-up successful, display success toast message
-          toast.success('Successfully signed up with Google', {
-              position: "top-right",
+// const handleGoogleSignUp = async () => {
+//   try {
+//       const result = await signIn('google', { callbackUrl: '/' });
+//       if (!result.error) {
+//           // Google sign-up successful, display success toast message
+//           toast.success('Successfully signed up with Google', {
+//               position: "top-right",
               
-          });
-      } else {
-          // Google sign-up failed, display error toast message
-          toast.error('Google sign-up failed. Please try again later.', {
-              position: "top-right",
+//           });
+//       } else {
+//           // Google sign-up failed, display error toast message
+//           toast.error('Google sign-up failed. Please try again later.', {
+//               position: "top-right",
               
-          });
-      }
-  } catch (error) {
-      console.error('Error during Google sign-up:', error);
-      // Display error toast message for unexpected errors
-      toast.error('An unexpected error occurred. Please try again later.', {
-          position: "top-right",
+//           });
+//       }
+//   } catch (error) {
+//       console.error('Error during Google sign-up:', error);
+//       // Display error toast message for unexpected errors
+//       toast.error('An unexpected error occurred. Please try again later.', {
+//           position: "top-right",
           
-      });
-  }
-};
+//       });
+//   }
+// };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{backgroundImage: "url('images/h3.jpg')"}}>

@@ -30,7 +30,7 @@ const Page = () => {
         }
       } catch (error) {
         // Handle any errors that occurred during the fetch operation
-        console.error('Error fetching properties');
+        setErrorMsg('Error fetching properties');
       } finally {
         setLoading(false);
       }

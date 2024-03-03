@@ -43,7 +43,6 @@ router.push('/')
               
           });
       } else {
-          console.error('Sign-in failed');
           // Display error toast message
           toast.error(data.message, {
               position: "top-right",
@@ -51,7 +50,10 @@ router.push('/')
           });
       }
   } catch (error) {
-      console.error('Error signing in:', error);
+      toast.error('An error occurred while signing in please try again later', {
+        position: "top-right",
+        
+    });
 
   } finally {
     setLoading(false);

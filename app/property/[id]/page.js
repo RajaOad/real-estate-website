@@ -8,11 +8,9 @@ import React, { useEffect, useState } from 'react';
 const PropertyDetailsPage = () => {
   const params = useParams();
   const { id } = params;
-  console.log(id)
   const [property, setProperty] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  console.log(property)
 
   useEffect(() => {
     async function fetchProperty() {
