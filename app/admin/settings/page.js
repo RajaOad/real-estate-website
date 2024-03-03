@@ -41,10 +41,10 @@ const SettingsPage = () => {
         'state_changed',
         (snapshot) => {
           const progress = Math.floor((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-          console.log(`Upload is ${progress}% done`);
+          // console.log(`Upload is ${progress}% done`);
         },
         (error) => {
-          console.error('Error uploading file:', error);
+          console.error('Error uploading file');
           reject(error);
         },
         () => {
@@ -68,7 +68,7 @@ const SettingsPage = () => {
       // Delete the image from Firebase storage
       await deleteObject(imageRef);
     } catch (error) {
-      console.error('Error deleting image:', error);
+      console.error('Error deleting image');
       throw error; // Rethrow the error to handle it outside
     }
   };
@@ -84,7 +84,7 @@ const SettingsPage = () => {
       imageUrl = await uploadImageToFirebase(file, 'profile-images');
       return imageUrl; // Return the image URL
     } catch (error) {
-      console.error('Error handling profile image upload:', error);
+      console.error('Error handling profile image upload');
       // Handle error appropriately, such as showing a toast message
       throw error; // Rethrow the error to handle it outside
     }
@@ -101,7 +101,7 @@ const SettingsPage = () => {
       imageUrl = await uploadImageToFirebase(file, 'background-images');
       return imageUrl; // Return the image URL
     } catch (error) {
-      console.error('Error handling background image upload:', error);
+      console.error('Error handling background image upload');
       // Handle error appropriately, such as showing a toast message
       throw error; // Rethrow the error to handle it outside
     }
@@ -121,7 +121,6 @@ const SettingsPage = () => {
       const data = await response.json();
       return data;
     } catch (error) {
-      console.error('Error updating user:', error);
       throw error;
     }
   };
@@ -157,14 +156,12 @@ const SettingsPage = () => {
         fetchUserInfo();
       } else {
         // Handle update failure
-        console.error('Failed to update user:', response.msg);
         toast.error(response.msg, {
           position: "top-right",
       });
         // Optionally, display an error message to the user
       }
     } catch (error) {
-      console.error('Error updating user:', error);
       toast.error('An error occurred while updating user please try again later', {
         position: "top-right",
     });

@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <>
     <HeroSection backgroundImage={"images/h1.jpg"} title={"Contact Us"} />
-      <section className="relative mx-24 mb-24 mt-12 z-10 overflow-hidden bg-white py-20 dark:bg-dark lg:py-[120px]">
+      <section className="relative px-4 md:px-24 mt-4 mb-12 md:mb-24 md:mt-12 z-10 overflow-hidden bg-white py-20 dark:bg-dark lg:py-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap lg:justify-between">
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12">

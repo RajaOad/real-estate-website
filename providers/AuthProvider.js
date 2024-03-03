@@ -46,7 +46,7 @@ export const AuthProvider = ({ children }) => {
     
             setLoading(false);
         } catch (error) {
-            console.error('Error fetching user information:', JSON.stringify(error));
+            // console.error('Error fetching user information:', JSON.stringify(error));
             // Handle network errors or other exceptions
             setLoading(false);
         }
@@ -74,7 +74,6 @@ export const AuthProvider = ({ children }) => {
                 
             });
         } catch (error) {
-            console.error('Error signing out');
             // Display error toast message
             toast.error('Error signing out. Please try again later.', {
                 position: "top-right",

@@ -57,7 +57,6 @@ const Page = () => {
           }
         } catch (error) {
           // Handle any errors that occurred during the fetch operation
-          console.error('Error fetching properties');
           setErrorMsg('An error occurred while fetching properties')
         } finally {
           setLoadingCard(false)
@@ -104,7 +103,9 @@ const Page = () => {
         //   return data;
         } catch (error) {
           // Handle errors
-          console.error('Error deleting property:', error);
+          toast.error('Error deleting property', {
+            position: "top-right",
+        });
         } finally {
             setLoading(false);
           }

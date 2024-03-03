@@ -71,7 +71,7 @@ setLoading(true)
       address,
       token,
     };
-console.log(propertyData)
+
     try {
       const response = await fetch('/api/addproperty', {
         method: 'POST',
@@ -85,7 +85,6 @@ console.log(propertyData)
 
       if (res.success === true) {
         setLoading(false)
-        console.log('Property added successfully!');
         setTitle('');
   setDescription('');
   setPrice('');
@@ -124,7 +123,6 @@ console.log(propertyData)
     const uniqueName = `${uuidv4()}_${file.name}`;
     const storageRef = ref(storage, `images/${uniqueName}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
-    console.log(uniqueName)
 
     return new Promise((resolve, reject) => {
 
@@ -147,7 +145,7 @@ console.log(propertyData)
         }, 
         (error) => {
           // Handle unsuccessful uploads
-          //  console.error('Error uploading file:', error);
+           console.error('Error uploading file');
           reject(error);
         }, 
         () => {

@@ -81,12 +81,11 @@ const UpdatePropertyDialog = ({ property, setShow, fetchData }) => {
         toast.success(res.msg, { position: 'top-right' });
         fetchData()
       } else {
-        console.error('Failed to update property:', response.statusText);
         setLoading(false);
         toast.error(res.msg, { position: 'top-right' });
       }
     } catch (error) {
-      console.error('Error updating property:', error);
+      console.error('Error updating property');
       setLoading(false);
     }
   };

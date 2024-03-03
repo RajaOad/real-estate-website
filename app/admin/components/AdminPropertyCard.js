@@ -38,7 +38,6 @@ const AdminPropertyCard = ({ property, deleteProperty, fetchData }) => {
         }));
       } catch (error) {
         // Handle the error appropriately, such as logging it
-        console.error('Error deleting images:', error);
         toast.error('Error deleting Property', {
           position: "top-right",
       });
