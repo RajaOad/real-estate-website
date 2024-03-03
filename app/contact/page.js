@@ -105,6 +105,7 @@ const Contact = () => {
                     </h4>
                     <p className="text-base text-body-color dark:text-dark-6">
                     Majid Ali Sanjrani +92 301-2612635
+                    Wajid Ali Sanjrani +92 332-3307835
                     Abdul Wahid +92 304-0448635
                     </p>
                   </div>
