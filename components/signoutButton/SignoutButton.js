@@ -7,16 +7,16 @@ import { BsFillPersonFill } from 'react-icons/bs';
 import { IoMdLogOut, IoMdSettings } from 'react-icons/io';
 
 const SignoutButton = () => {
-    const { signOut, authenticated, user } = useAuth();
-    const [showDropdown, setShowDropdown] = useState(false);
+  const { signOut, authenticated, user } = useAuth();
+  const [showDropdown, setShowDropdown] = useState(false);
 
-    const toggleDropdown = () => {
-        setShowDropdown(!showDropdown);
-      };
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
 
-    // If authenticated is true, render the sign-out button; otherwise, render null
-    return (
-        <>
+  // If authenticated is true, render the sign-out button; otherwise, render null
+  return (
+    <>
       {authenticated ? (
         <div className="relative inline-block text-left">
           <div className='hidden md:block'>
@@ -36,41 +36,40 @@ const SignoutButton = () => {
           </div>
 
           {showDropdown ? (
-  <div
-    className="origin-top-right absolute -right-14 mt-2 w-48 rounded-md shadow-lg bg-gray-100 transition duration-500 ring-1 ring-black ring-opacity-5 focus:outline-none"
-    role="menu"
-    aria-orientation="vertical"
-    aria-labelledby="user-menu"
-  >
-    <div className="p-4" role="none">
-    
-      {user.admin && (
-        <Link
-          href="/admin"
-          className="flex items-center justify-center w-full mb-2 rounded px-4 py-3 text-sm bg-gray-300 hover:bg-gray-500 transition duration-300 focus:outline-none"
-        >
-          <IoMdSettings className="mr-2 text-lg" />
-          Dashboard
-        </Link>
-      )}
+            <div
+              className="origin-top-right absolute -right-14 mt-2 w-48 rounded-md shadow-lg bg-gray-100 transition duration-500 ring-1 ring-black ring-opacity-5 focus:outline-none"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="user-menu"
+            >
+              <div className="p-4" role="none">
 
-        <button
-        type="button"
-        className="flex items-center justify-center w-full rounded px-4 py-3 text-sm text-white bg-red-500 hover:bg-red-700 transition duration-300 focus:outline-none"
-        onClick={() => { signOut(); toggleDropdown(); }}
-      >
-        <IoMdLogOut className="mr-2 text-lg" />
-        Logout
-      </button>
-    </div>
-  </div>
-) : null}
+                {user && user.admin && (
+                  <Link
+                    href="/admin"
+                    className="flex items-center justify-center w-full mb-2 rounded px-4 py-3 text-sm bg-gray-300 hover:bg-gray-500 transition duration-300 focus:outline-none"
+                  >
+                    <IoMdSettings className="mr-2 text-lg" />
+                    Dashboard
+                  </Link>
+                )}
+                <button
+                  type="button"
+                  className="flex items-center justify-center w-full rounded px-4 py-3 text-sm text-white bg-red-500 hover:bg-red-700 transition duration-300 focus:outline-none"
+                  onClick={() => { signOut(); toggleDropdown(); }}
+                >
+                  <IoMdLogOut className="mr-2 text-lg" />
+                  Logout
+                </button>
+              </div>
+            </div>
+          ) : null}
         </div>
       ) : (
-      null
+        null
       )}
     </>
-    )
+  )
 };
 
 export default SignoutButton;

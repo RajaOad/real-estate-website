@@ -25,7 +25,7 @@ const Page = () => {
 
     <div className="md:w-3/5 w-full mx-4 md:mx-auto md:mr-36 my-24 md:my-32 bg-white shadow-xl rounded-lg text-gray-900">
             <div className="overflow-hidden rounded-t-lg h-60 relative">
-                <img src={user && user.backgroundImage ? user.backgroundImage : 'https://placehold.co/600x400'} className="w-full h-full object-cover" alt="Profile Image" />
+                <img src={user && user.backgroundImage ? user.backgroundImage : 'https://placehold.co/900x300'} className="w-full h-full object-cover" alt="Profile Image" />
             </div>
             <div className="flex justify-center items-center -mt-20">
                 <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-white">

@@ -15,7 +15,7 @@ const MobileMenu = () => {
 
   return (
     <>
-          <div className="flex justify-end z-50 md:hidden">
+      <div className="flex justify-end z-50 md:hidden">
         <button
           onClick={toggleMenu}
           className="text-white focus:outline-none focus:text-white border border-white px-3 py-2"
@@ -48,54 +48,56 @@ const MobileMenu = () => {
         </button>
       </div>
 
-    <div className={`md:hidden w-full bg-[#001F5B] ${isOpen ? "bg-opacity-90 top-0": "bg-opacity-0 -top-96"} backdrop-filter transition-all duration-500 absolute right-0`}>
+      <div className={`md:hidden w-full bg-[#001F5B] ${isOpen ? "bg-opacity-90 top-0" : "bg-opacity-0 -top-96"} backdrop-filter transition-all duration-500 absolute right-0`}>
 
-      {isOpen && (
-        <div className="py-4 flex flex-col justify-center items-center">
-          <Link href="/">
-            <span className="block text-white hover:text-gray-300 py-2">
-              Home
-            </span>
-          </Link>
-         
-          <Link href="/about">
-            <span className="block text-white hover:text-gray-300 py-2">
-              About
-            </span>
-          </Link>
-          <Link href="/properties">
-            <span className="block text-white hover:text-gray-300 py-2">
-              Properties
-            </span>
-          </Link>
-          <Link href="/agents">
-            <span className="block text-white hover:text-gray-300 py-2">
-              Agents
-            </span>
-          </Link>
-          <Link href="/blog">
-            <span className="block text-white hover:text-gray-300 py-2">
-              Blog
-            </span>
-          </Link>
-          <Link href="/contact">
-            <span className="block text-white hover:text-gray-300 py-2">
-              Contact
-            </span>
-          </Link>
-          {user.admin && <Link href="/admin">
-            <span className="block text-white hover:text-gray-300 py-2">
-            Dashboard
-            </span>
-          </Link>}
-          <button onClick={()=> signOut()} >
-            <span className="block text-white hover:text-gray-300 py-2">
-              Logout
-            </span>
-          </button>
-        </div>
-      )}
-    </div>
+        {isOpen && (
+          <div className="py-4 flex flex-col justify-center items-center">
+            <Link href="/">
+              <span className="block text-white hover:text-gray-300 py-2">
+                Home
+              </span>
+            </Link>
+
+            <Link href="/about">
+              <span className="block text-white hover:text-gray-300 py-2">
+                About
+              </span>
+            </Link>
+            <Link href="/properties">
+              <span className="block text-white hover:text-gray-300 py-2">
+                Properties
+              </span>
+            </Link>
+            <Link href="/agents">
+              <span className="block text-white hover:text-gray-300 py-2">
+                Agents
+              </span>
+            </Link>
+            <Link href="/blog">
+              <span className="block text-white hover:text-gray-300 py-2">
+                Blog
+              </span>
+            </Link>
+            <Link href="/contact">
+              <span className="block text-white hover:text-gray-300 py-2">
+                Contact
+              </span>
+            </Link>
+            {user && user.admin ? (
+              <Link href="/admin">
+                <span className="block text-white hover:text-gray-300 py-2">
+                  Dashboard
+                </span>
+              </Link>
+            ) : null}
+            <button onClick={() => signOut()} >
+              <span className="block text-white hover:text-gray-300 py-2">
+                Logout
+              </span>
+            </button>
+          </div>
+        )}
+      </div>
     </>
   );
 };

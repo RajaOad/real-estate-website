@@ -1,5 +1,6 @@
 import connectDB from '@/utils/db';
 import User from '@/models/User';
+import { NextResponse } from 'next/server';
 
 export const GET = async () => {
   try {
@@ -9,7 +10,7 @@ export const GET = async () => {
     const agents = await User.find({ admin: true });
 
     if (agents.length === 0) {
-      return new NextResponse(JSON.stringify({ success: true, message: 'No agents found' }), { status: 200 });
+      return new NextResponse(JSON.stringify({ success: false, message: 'No agent found' }), { status: 404 });
     }
 
     return new NextResponse(JSON.stringify({ success: true, agents }), { status: 200 });
