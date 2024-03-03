@@ -10,7 +10,7 @@ import AgentCardSkeleton from '../agentCardSkeleton/AgentCardSkeleton';
 const AgentSection = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
   const [agents, setAgents] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
 
@@ -18,12 +18,13 @@ const AgentSection = () => {
   useEffect(() => {
     const fetchAdminUsers = async () => {
       try {
+        setLoading(true)
         const response = await fetch('/api/fetchagents');
 
         if (response.ok) {
           const data = await response.json();
 
-          if (data.success) {
+          if (data.success === true) {
             setAgents(data.agents);
           } else {
             setError(data.message);

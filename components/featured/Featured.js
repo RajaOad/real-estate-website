@@ -28,7 +28,8 @@ const Featured = () => {
         }
       } catch (error) {
         
-        // console.log(error.message)
+        console.log(error.message)
+        setErrorMsg('An error occurred while fetching featured properties')
       } finally {
         setLoading(false);
       }
