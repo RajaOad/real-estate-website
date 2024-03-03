@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { FaTwitter, FaFacebook, FaInstagram, FaPhone, FaPaperPlane, FaChevronRight, FaMap } from 'react-icons/fa';
 
@@ -35,22 +36,22 @@ const Footer = () => {
         <div className="w-2/4 md:w-1/5">
           <h2 className="text-lg md:text-xl font-semibold mb-4 md:mb-8">Offers</h2>
           <ul className="text-xs md:text-sm">
-            <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Properties</a></li>
-            <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Agents</a></li>
-            <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Locations</a></li>
-            <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Clients Support</a></li>
+            <li className="mb-3"><Link href="/properties" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Properties</Link></li>
+            <li className="mb-3"><Link href="/agents" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Agents</Link></li>
+            <li className="mb-3"><Link href="/contact" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Locations</Link></li>
+            <li className="mb-3"><Link href="/contact" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Clients Support</Link></li>
           </ul>
         </div>
         <div className="w-2/4 md:w-1/5">
           <h2 className="text-lg md:text-xl font-semibold mb-4 md:mb-8">Company</h2>
           <ul className="text-xs md:text-sm">
-            <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Home</a></li>
-            <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>About</a></li>
-            <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Blog</a></li>
-            <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Contact Us</a></li>
+            <li className="mb-3"><Link href="/" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Home</Link></li>
+            <li className="mb-3"><Link href="/about" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>About</Link></li>
+            <li className="mb-3"><Link href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Blog</Link></li>
+            <li className="mb-3"><Link href="/contact" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Contact Us</Link></li>
           </ul>
         </div>
-        <div className="w-2/4 md:w-1/5 mt-6 md:mt-0">
+        {/* <div className="w-2/4 md:w-1/5 mt-6 md:mt-0">
           <h2 className="text-lg md:text-xl font-semibold mb-4 md:mb-8">Quick Links</h2>
           <ul className="text-xs md:text-sm">
             <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Terms & Conditions</a></li>
@@ -58,21 +59,21 @@ const Footer = () => {
             <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Support Center</a></li>
             <li className="mb-3"><a href="#" className="text-links items-center flex"><span className="mr-1"><FaChevronRight /></span>Press Info</a></li>
           </ul>
-        </div>
+        </div> */}
         <div className="md:pb-10 w-2/4 md:w-1/5 mt-6 md:mt-0">
           <h2 className="text-lg md:text-xl font-semibold mb-4 md:mb-8">Have a Question?</h2>
           <div className="block-23 mb-3">
             <ul>
-              <li className='flex text-footer'><span className="mr-4 text-footer"><FaMap /></span><span className="text-xs md:text-sm">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-              <li className="mt-2 text-footer"><a href="#" className=' flex items-center'><span className="mr-4 text-footer"><FaPhone /></span><span className="text-xs md:text-sm">+2 392 3929 210</span></a></li>
-              <li className="mt-2 text-footer"><a href="#" className=' flex items-center'><span className="mr-4 text-footer"><FaPaperPlane /></span><span className="text-xs md:text-sm">info@yourdomain.com</span></a></li>
+              <li className='flex text-footer'><span className="mr-4 text-footer"><FaMap /></span><span className="text-xs md:text-sm">Karachi</span></li>
+              <li className="mt-2 text-footer"><a href="#" className=' flex items-center'><span className="mr-4 text-footer"><FaPhone /></span><span className="text-xs md:text-sm">+923012612635</span></a></li>
+              <li className="mt-2 text-footer"><a href="#" className=' flex items-center'><span className="mr-4 text-footer"><FaPaperPlane /></span><span className="text-xs md:text-sm">binshabeeran786@gmail.com</span></a></li>
             </ul>
           </div>
         </div>
       </div>
         <div className="text-center text-xs md:text-sm md:w-full md:mt-5 bg-agents px-4 py-8 md:px-20 md:py-10" style={{ color: 'rgba(255, 255, 255, 0.5)' }}>
           <p className="md:mb-3">
-          Copyright &copy; 2024 All rights reserved | BAITUL SHABEERAN
+          Copyright &copy; 2024 All rights reserved | BIN SHABEERAN
           </p>
         </div>
     </footer>
