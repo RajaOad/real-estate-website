@@ -35,10 +35,12 @@ const AddProperty = () => {
   const router = useRouter()
 
   useEffect(() => {
-    if (authenticated && user && !user.admin) {
+
+    if(user ? !user.admin : true) {
       router.push('/');
     }
-  }, [authenticated, user]);
+
+  }, [authenticated])
 
 
 
