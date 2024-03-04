@@ -13,12 +13,10 @@ const Page = () => {
   const router = useRouter()
 
   useEffect(() => {
-
-    if(user ? !user.admin : true) {
+    if (authenticated && user && !user.admin) {
       router.push('/');
     }
-
-  }, [authenticated])
+  }, [authenticated, user]);
   
 
   return (
