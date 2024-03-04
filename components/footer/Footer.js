@@ -3,6 +3,7 @@ import React from 'react';
 import { FaTwitter, FaFacebook, FaInstagram, FaPhone, FaPaperPlane, FaChevronRight, FaMap } from 'react-icons/fa';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-footer text-white">
       <div className="container mx-auto px-4 md:px-20 py-16 md:pt-28 md:pb-20 flex md:flex-row flex-wrap md:flex-nowrap justify-between items-center">
@@ -73,7 +74,7 @@ const Footer = () => {
       </div>
         <div className="text-center text-xs md:text-sm md:w-full md:mt-5 bg-agents px-4 py-8 md:px-20 md:py-10" style={{ color: 'rgba(255, 255, 255, 0.5)' }}>
           <p className="md:mb-3">
-          Copyright &copy; 2024 All rights reserved | BIN SHABEERAN
+          Copyright &copy; {currentYear} All rights reserved | BIN SHABEERAN
           </p>
         </div>
     </footer>

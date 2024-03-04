@@ -14,7 +14,7 @@ const PropertyCard = ({ property }) => {
     </Link>
     <div className="p-4">
       <div className="flex items-center mb-4">
-        <div className="w-10 h-10 bg-cover rounded-full" style={{backgroundImage: `url(${property.userId.image ? property.userId.image : 'https://placehold.co/400'})`}}></div>
+        <div className="w-10 h-10 bg-cover rounded-full" style={{backgroundImage: `url(${property.userId.profileImage ? property.userId.profileImage : 'https://placehold.co/400'})`}}></div>
         <h3 className="ml-2">{property.userId.username}</h3>
       </div>
       <p className="text-sm text-gray-500 mb-2">{formatDistanceToNow(property.createdAt) + " ago"}</p>

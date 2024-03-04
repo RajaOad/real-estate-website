@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 export const GET = async (req) => {
   try {
     // Fetch featured properties where featured is true
-    const featuredProperties = await Property.find({ featured: true });
+    const featuredProperties = await Property.find({ featured: true }).populate('userId');;
 
     // If no featured properties found, return a response indicating so
     if (featuredProperties.length === 0) {

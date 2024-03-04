@@ -9,6 +9,7 @@ import { ref, uploadBytesResumable, getDownloadURL, deleteObject } from 'firebas
 import { v4 as uuidv4 } from 'uuid';
 import { storage } from '@/utils/firebase';
 import { useRouter } from 'next/navigation';
+import UpdatePasswordForm from '../components/UpdatePasswordForm';
 
 const SettingsPage = () => {
   const { user, authenticated, fetchUserInfo } = useAuth();
@@ -347,7 +348,11 @@ const SettingsPage = () => {
           Save Changes
         </button>
       </form>
+      <div className='mt-24'>
+    <UpdatePasswordForm />
     </div>
+    </div>
+
 
     </div>
 

@@ -6,7 +6,7 @@ import { useAuth } from '@/providers/AuthProvider';
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { user, signOut } = useAuth();
+  const { user, signOut, authenticated } = useAuth();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -52,6 +52,24 @@ const MobileMenu = () => {
 
         {isOpen && (
           <div className="py-4 flex flex-col justify-center items-center">
+
+            {!authenticated ? (
+              <div className="self-start ml-4">
+                <Link
+                  href="/signin"
+                  className="inline-flex items-center p-3 border text-xs md:text-base font-medium text-white bg-[#001F5B] hover:bg-blue-700 transition duration-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700 mr-2"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  href="/signup"
+                  className="inline-flex items-center p-3 border text-xs md:text-base font-medium text-white bg-[#001F5B] hover:bg-blue-700 transition duration-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700"
+                >
+                  Sign Up
+                </Link>
+              </div>
+            ) : null}
+
             <Link href="/">
               <span className="block text-white hover:text-gray-300 py-2">
                 Home
@@ -73,11 +91,11 @@ const MobileMenu = () => {
                 Agents
               </span>
             </Link>
-            <Link href="/blog">
+            {/* <Link href="/blog">
               <span className="block text-white hover:text-gray-300 py-2">
                 Blog
               </span>
-            </Link>
+            </Link> */}
             <Link href="/contact">
               <span className="block text-white hover:text-gray-300 py-2">
                 Contact
@@ -90,11 +108,11 @@ const MobileMenu = () => {
                 </span>
               </Link>
             ) : null}
-            <button onClick={() => signOut()} >
+            {authenticated && <button onClick={() => signOut()} >
               <span className="block text-white hover:text-gray-300 py-2">
                 Logout
               </span>
-            </button>
+            </button>}
           </div>
         )}
       </div>

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-const MobileMenu = ({ signOut }) => {
+const MobileMenu = ({ signOut, authenticated }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,7 +13,7 @@ const MobileMenu = ({ signOut }) => {
 
   return (
     <>
-          <div className="flex bg-primary justify-end z-50 md:hidden">
+      <div className="flex bg-primary justify-end z-50 md:hidden">
         <button
           onClick={toggleMenu}
           className="text-white focus:outline-none focus:text-white border border-white px-3 py-2"
@@ -46,48 +46,66 @@ const MobileMenu = ({ signOut }) => {
         </button>
       </div>
 
-    <div className={`md:hidden w-full bg-[#001F5B] ${isOpen ? "bg-opacity-90 top-0": "bg-opacity-0 -top-96"} backdrop-filter transition-all duration-500 absolute right-0`}>
+      <div className={`md:hidden w-full bg-[#001F5B] ${isOpen ? "bg-opacity-90 top-0" : "bg-opacity-0 -top-96"} backdrop-filter transition-all duration-500 absolute right-0`}>
 
-      {isOpen && (
-        <div className="py-4 flex flex-col justify-center items-center">
-          <Link href="/">
-            <span className="block text-white hover:text-gray-300 py-2">
-              Home
-            </span>
-          </Link>
-          <Link href="/admin">
-            <span className="block text-white hover:text-gray-300 py-2">
-              Dashboard
-            </span>
-          </Link>
-          <Link href="/admin/addproperty">
-            <span className="block text-white hover:text-gray-300 py-2">
-            Add Property
-            </span>
-          </Link>
-          <Link href="/admin/properties">
-            <span className="block text-white hover:text-gray-300 py-2">
-            Your Propeties
-            </span>
-          </Link>
-          <Link href="/admin/profile">
-            <span className="block text-white hover:text-gray-300 py-2">
-            Profile
-            </span>
-          </Link>
-          <Link href="/admin/settings">
-            <span className="block text-white hover:text-gray-300 py-2">
-            Settings
-            </span>
-          </Link>
-          <button onClick={()=> signOut()}>
-            <span className="block text-white hover:text-gray-300 py-2">
-            Log out
-            </span>
-          </button>
-        </div>
-      )}
-    </div>
+        {isOpen && (
+          <div className="py-4 flex flex-col justify-center items-center">
+
+            {!authenticated ? (
+              <div className="self-start ml-4">
+                <Link
+                  href="/signin"
+                  className="inline-flex items-center p-3 border text-xs md:text-base font-medium text-white bg-[#001F5B] hover:bg-blue-700 transition duration-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700 mr-2"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  href="/signup"
+                  className="inline-flex items-center p-3 border text-xs md:text-base font-medium text-white bg-[#001F5B] hover:bg-blue-700 transition duration-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700"
+                >
+                  Sign Up
+                </Link>
+              </div>
+            ) : null}
+
+            <Link href="/">
+              <span className="block text-white hover:text-gray-300 py-2">
+                Home
+              </span>
+            </Link>
+            <Link href="/admin">
+              <span className="block text-white hover:text-gray-300 py-2">
+                Dashboard
+              </span>
+            </Link>
+            <Link href="/admin/addproperty">
+              <span className="block text-white hover:text-gray-300 py-2">
+                Add Property
+              </span>
+            </Link>
+            <Link href="/admin/properties">
+              <span className="block text-white hover:text-gray-300 py-2">
+                Your Propeties
+              </span>
+            </Link>
+            <Link href="/admin/profile">
+              <span className="block text-white hover:text-gray-300 py-2">
+                Profile
+              </span>
+            </Link>
+            <Link href="/admin/settings">
+              <span className="block text-white hover:text-gray-300 py-2">
+                Settings
+              </span>
+            </Link>
+            {authenticated && <button onClick={() => signOut()}>
+              <span className="block text-white hover:text-gray-300 py-2">
+                Log out
+              </span>
+            </button>}
+          </div>
+        )}
+      </div>
     </>
   );
 };

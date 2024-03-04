@@ -3,6 +3,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Hero = () => {
 
@@ -79,8 +80,8 @@ const Hero = () => {
                                             initial="hidden"
                                             animate={inView ? "visible" : "hidden"}
                                         >
-                                            <button className='py-3 px-6 text-xs md:text-base md:py-4 md:px-8 bg-[#f0f0f0] text-[#6b7280] hover:bg-gray-300 hover:text-[#374151] transition duration-300 ease-in-out transform hover:scale-105'>Buy Properties</button>
-                                            <button className='py-3 px-6 text-xs md:text-base md:py-4 md:px-8 bg-[#001F5B] text-white hover:bg-blue-700 hover:text-white transition duration-300 ease-in-out transform hover:scale-105'>Rent Properties</button>
+                                            <button className='py-3 px-6 text-xs md:text-base md:py-4 md:px-8 bg-[#f0f0f0] text-[#6b7280] hover:bg-gray-300 hover:text-[#374151] transition duration-300 ease-in-out transform hover:scale-105'><Link href="/properties">Buy Properties</Link></button>
+                                            <button className='py-3 px-6 text-xs md:text-base md:py-4 md:px-8 bg-[#001F5B] text-white hover:bg-blue-700 hover:text-white transition duration-300 ease-in-out transform hover:scale-105'><Link href="/contact">Rent Properties</Link></button>
 
 
                                         </motion.div>

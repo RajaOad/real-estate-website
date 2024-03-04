@@ -4,7 +4,7 @@ import MobileMenu from './MobileMenu';
 // import { RiNotificationLine, RiSearchLine } from 'react-icons/ri'
 
 const AdminNavbar = () => {
-  const { user, signOut } = useAuth();
+  const { user, signOut, authenticated } = useAuth();
   return (
     <>
       <div className="fixed bg-white text-gray-800 px-10 py-2 z-10 w-full shadow-md">
@@ -18,7 +18,7 @@ const AdminNavbar = () => {
             {/* Add your image here */}
             <img src={user && user.profileImage ? user.profileImage : 'https://placehold.co/400'} alt="Profile" className="rounded-full h-10 w-10 ml-2 hover:ring-2 ring-primary ring-opacity-50 transition duration-300" />
           </div>
-      <MobileMenu signOut={signOut} />
+      <MobileMenu signOut={signOut} authenticated={authenticated} />
         </div>
       </div> 
     </>

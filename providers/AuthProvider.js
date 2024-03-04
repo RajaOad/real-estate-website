@@ -14,11 +14,20 @@ export const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [authenticated, setAuthenticated] = useState(false);
     const router = useRouter();
+    
+    const getTokenFromLocalStorage = () => {
+        if (typeof window !== "undefined") {
+          return localStorage.getItem("token");
+        }
+        return null;
+      };
+      
 
+      const token = getTokenFromLocalStorage();
+      
     const fetchUserInfo = async () => {
         try {
             // Retrieve the token from local storage
-            const token = localStorage.getItem('token');
     
             if (!token) {
                 // Token is missing, handle accordingly (e.g., redirect to login)
@@ -57,7 +66,7 @@ export const AuthProvider = ({ children }) => {
         fetchUserInfo();
         setMounted(true)
 
-    }, [authenticated]);
+    }, [authenticated, token]);
 
 
 
