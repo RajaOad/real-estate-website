@@ -43,7 +43,7 @@ const About = () => {
             >
               <span className="subheading uppercase font-bold mb-4 text-xs md:text-sm text-primary">About Us</span>
               <h2 className="my-4 text-3xl md:text-5xl font-semibold text-secondary"><span className='bg-primary text-white rounded-full py-2 px-6'>BIN SHABEERAN</span></h2>
-              <h2 className='my-4 text-3xl md:text-5xl font-semibold text-secondary'>A Real Estate and Construction Agency</h2>
+              <h2 className='my-4 text-3xl md:text-5xl font-semibold text-secondary'>The Real Estate and Property consultant</h2>
               <p className="mb-6 text-secondary leading-7 text-sm md:text-base">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
             </motion.div>
             <motion.div
