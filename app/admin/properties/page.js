@@ -23,13 +23,10 @@ const Page = () => {
     const router = useRouter()
   
     useEffect(() => {
-  
-      if(user ? !user.admin : true) {
-        router.push('/');
-      }
-  
-    }, [authenticated])
-
+    if (authenticated && user && !user.admin) {
+      router.push('/');
+    }
+  }, [authenticated, user]);
 
 
     const fetchData = async () => {
