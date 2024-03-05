@@ -13,12 +13,12 @@ const Page = () => {
   const router = useRouter()
 
   useEffect(() => {
-    if (!authenticated || (authenticated && user && !user.admin)) {
-      console.log('Redirecting to home page');
+
+    if(user ? !user.admin : true) {
       router.push('/');
     }
-  }, [authenticated, user]);
-  
+
+  }, [authenticated])
   
 
   return (
