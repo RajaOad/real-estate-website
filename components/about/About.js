@@ -44,7 +44,7 @@ const About = () => {
               <span className="subheading uppercase font-bold mb-4 text-xs md:text-sm text-primary">About Us</span>
               <h2 className="my-4 text-3xl md:text-5xl font-semibold text-secondary"><span className='bg-primary text-white rounded-full py-2 px-6'>BIN SHABEERAN</span></h2>
               <h2 className='my-4 text-3xl md:text-5xl font-semibold text-secondary'>The Real Estate and Property consultant</h2>
-              <p className="mb-6 text-secondary leading-7 text-sm md:text-base">Welcome to BIN SHABEERAN - your trusted real estate and property consultancy with 18 years of experience. Our dedicated team offers personalized service and expert guidance to help you navigate the real estate market with confidence. Whether buying, selling, or renting, we're here to make your real estate journey seamless and successful. Discover why clients trust BIN SHABEERAN for their real estate needs today.</p>
+              <p className="mb-6 text-secondary leading-7 text-sm md:text-base">Welcome to BIN SHABEERAN - your trusted real estate and property consultancy with 18 years of experience. Our dedicated team offers personalized service and expert guidance to help you navigate the real estate market with confidence. Whether buying, selling, or renting, we&apos;re here to make your real estate journey seamless and successful. Discover why clients trust BIN SHABEERAN for their real estate needs today.</p>
             </motion.div>
             <motion.div
               className="grid grid-cols-1 gap-5 md:grid-cols-1 py-8"
