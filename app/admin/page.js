@@ -38,28 +38,28 @@ const Page = () => {
   <div className="bg-white rounded-lg shadow-lg md:w-1/3 p-6 md:mr-4 hover:shadow-xl transition-shadow duration-300">
     <div className="flex flex-col justify-between h-full">
       <div>
-        <h3 className="text-xl font-semibold mb-4">Add New Property</h3>
-        <p className="text-gray-600 mb-4">You can add new properties to the listing by providing property details, images, and other relevant information.</p>
+        <h3 className="text-lg font-semibold mb-4">Add New Property</h3>
+        <p className="text-gray-600 text-sm mb-4">You can add new properties to the listing by providing property details, images, and other relevant information.</p>
       </div>
-      <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"><Link href="/admin/addproperty"> Go to Add Property</Link></button>
+      <button className="bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"><Link href="/admin/addproperty"> Go to Add Property</Link></button>
     </div>
   </div>
   <div className="bg-white rounded-lg shadow-lg md:w-1/3 p-6 md:mx-4 hover:shadow-xl transition-shadow duration-300">
     <div className="flex flex-col justify-between h-full">
       <div>
-        <h3 className="text-xl font-semibold mb-4">View Added Properties</h3>
-        <p className="text-gray-600 mb-4">You can view all the properties added to the listing. You can also update existing property details and delete properties.</p>
+        <h3 className="text-lg font-semibold mb-4">View Added Properties</h3>
+        <p className="text-gray-600 text-sm mb-4">You can view all the properties added to the listing. You can also update existing property details and delete properties.</p>
       </div>
-      <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"><Link href="/admin/properties"> Go to Properties</Link></button>
+      <button className="bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"><Link href="/admin/properties"> Go to Properties</Link></button>
     </div>
   </div>
   <div className="bg-white rounded-lg shadow-lg md:w-1/3 p-6 md:ml-4 hover:shadow-xl transition-shadow duration-300">
     <div className="flex flex-col justify-between h-full">
       <div>
-        <h3 className="text-xl font-semibold mb-4">Manage Settings</h3>
-        <p className="text-gray-600 mb-4">Access settings to manage your profile. you can change profile image, username, contact number, and social media links.</p>
+        <h3 className="text-lg font-semibold mb-4">Manage Settings</h3>
+        <p className="text-gray-600 text-sm mb-4">Access settings to manage your profile. you can change profile image, username, contact number, and social media links.</p>
       </div>
-      <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"><Link href="/admin/settings"> Go to Settings</Link></button>
+      <button className="bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"><Link href="/admin/settings"> Go to Settings</Link></button>
     </div>
   </div>
 </div>
