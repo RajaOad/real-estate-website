@@ -92,7 +92,7 @@ const TestimonialSection = () => {
                       <div className="text mt-4">
                         <p className="mb-4 msg text-gray-800 text-sm leading-6">{testimonial.message}</p>
                         <div className="flex items-center">
-                          <div className="user-img w-16 h-16 rounded-full bg-cover overflow-hidden" style={{ backgroundImage: `url(${testimonial.image})` }}></div>
+                          <div className="user-img w-16 h-16 bg-cover overflow-hidden" style={{ backgroundImage: `url(${testimonial.image})` }}></div>
                           <div className="pl-4">
                             <p className="name font-semibold text-lg text-gray-900">{testimonial.name}</p>
                             <p className="uppercase text-primary text-xs mt-2">{testimonial.position}</p>
