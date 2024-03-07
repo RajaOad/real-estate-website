@@ -39,7 +39,7 @@ const Contact = () => {
                       Our Location
                     </h4>
                     <p className="text-base text-body-color dark:text-dark-6">
-                      Karachi
+                    Bin Shabeeran Real Estate and Property consultant A2/119 Abdullah Shah Gazi Karachi
                     </p>
                   </div>
                 </div>
@@ -120,7 +120,9 @@ const Contact = () => {
     title="Google Maps"
     width="100%"
     height="450"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d924237.7556155632!2d66.49460115660841!3d25.19297760686533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1709425390660!5m2!1sen!2sus"
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3617.056432031354!2d67.14899506419896!3d24.964194579481482!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb347872de27de3%3
+    A0x7faa56b3c2482ee6!2sX47X%2BJM2%2C%20Sector%2030%20Gulzar%20E%20Hijri%20Scheme%2033%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh!5e0!3m2!1sen!2s!4v1709807862423!5m2!
+    1sen!2s"
   ></iframe>
                 <div>
                   <span className="absolute -right-9 -top-10 z-[-1]">

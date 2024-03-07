@@ -10,42 +10,29 @@ import { motion } from 'framer-motion';
 const TestimonialSection = () => {
   const testimonials = [
     {
-      name: 'Roger Scott',
-      position: 'Marketing Manager',
-      message: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-      image: 'images/h1.jpg',
+      name: 'Ayesha Khan',
+      position: 'Home Buyer',
+      message: 'BIN SHABEERAN made my home buying experience smooth and hassle-free. They guided me through every step of the process with patience and professionalism. Highly recommend their services!',
+      image: 'images/user.png',
     },
     {
-      name: 'Roger Scott',
-      position: 'Marketing Manager',
-      message: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-      image: 'images/h2.jpg',
+      name: 'Usman Ali',
+      position: 'Property Seller',
+      message: 'I entrusted BIN SHABEERAN with selling my property, and they exceeded my expectations. Their expertise and market knowledge ensured a quick and profitable sale. Thank you for your exceptional service!',
+      image: 'images/user.png',
     },
     {
-      name: 'Roger Scott',
-      position: 'Marketing Manager',
-      message: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-      image: 'images/h3.jpg',
+      name: 'Fatima Hassan',
+      position: 'Home Buyer',
+      message: 'Buying my first home seemed daunting, but BIN SHABEERAN made it a breeze. They patiently answered all my questions and helped me find the perfect home within my budget. Thank you for making my dream come true!',
+      image: 'images/user.png',
     },
     {
-      name: 'Roger Scott',
-      position: 'Marketing Manager',
-      message: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-      image: 'images/h4.jpg',
-    },
-    {
-      name: 'Roger Scott',
-      position: 'Marketing Manager',
-      message: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-      image: 'images/h2.jpg',
-    },
-    {
-      name: 'Roger Scott',
-      position: 'Marketing Manager',
-      message: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-      image: 'images/h1.jpg',
-    },
-    // Add more fake testimonials as needed
+      name: 'Sadia Ali',
+      position: 'Commercial Property Tenant',
+      message: 'BIN SHABEERAN helped me find the perfect commercial space for my business. Their in-depth market knowledge and negotiation skills ensured I got the best deal possible. Thank you for your exceptional service!',
+      image: 'images/user.png',
+    }
   ];
 
   const { ref, inView } = useInView({triggerOnce: true });
@@ -103,11 +90,11 @@ const TestimonialSection = () => {
                     <div className="testimony-wrap bg-white p-8 rounded-lg shadow-md">
                       <div className="p-4 bg-primary absolute left-5 -top-5 rounded-full text-white"><FaQuoteLeft /></div>
                       <div className="text mt-4">
-                        <p className="mb-4 msg text-gray-800 leading-8">{testimonial.message}</p>
+                        <p className="mb-4 msg text-gray-800 text-sm leading-6">{testimonial.message}</p>
                         <div className="flex items-center">
-                          <div className="user-img w-20 h-20 rounded-full bg-cover overflow-hidden" style={{ backgroundImage: `url(${testimonial.image})` }}></div>
+                          <div className="user-img w-16 h-16 rounded-full bg-cover overflow-hidden" style={{ backgroundImage: `url(${testimonial.image})` }}></div>
                           <div className="pl-4">
-                            <p className="name font-semibold text-xl text-gray-900">{testimonial.name}</p>
+                            <p className="name font-semibold text-lg text-gray-900">{testimonial.name}</p>
                             <p className="uppercase text-primary text-xs mt-2">{testimonial.position}</p>
                           </div>
                         </div>

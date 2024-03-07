@@ -44,7 +44,7 @@ const About = () => {
               <span className="subheading uppercase font-bold mb-4 text-xs md:text-sm text-primary">About Us</span>
               <h2 className="my-4 text-3xl md:text-5xl font-semibold text-secondary"><span className='bg-primary text-white rounded-full py-2 px-6'>BIN SHABEERAN</span></h2>
               <h2 className='my-4 text-3xl md:text-5xl font-semibold text-secondary'>The Real Estate and Property consultant</h2>
-              <p className="mb-6 text-secondary leading-7 text-sm md:text-base">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+              <p className="mb-6 text-secondary leading-7 text-sm md:text-base">Welcome to BIN SHABEERAN - your trusted real estate and property consultancy with 18 years of experience. Our dedicated team offers personalized service and expert guidance to help you navigate the real estate market with confidence. Whether buying, selling, or renting, we're here to make your real estate journey seamless and successful. Discover why clients trust BIN SHABEERAN for their real estate needs today.</p>
             </motion.div>
             <motion.div
               className="grid grid-cols-1 gap-5 md:grid-cols-1 py-8"
@@ -52,11 +52,11 @@ const About = () => {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
             >
-              <div className='flex flex-wrap justify-between'>
+              <div className='flex flex-wrap justify-around'>
                 <div className="counter-wrap">
                   <div className="text">
                     <span className="d-block number gradient-text text-2xl md:text-4xl font-semibold">
-                      <CountUp start={inView ? 0 : null} end={50} duration={2} delay={1} />
+                      <CountUp start={inView ? 0 : null} end={18} duration={2} delay={1} />
                     </span>
                     <p className='uppercase text-xs md:text-sm text-primary font-semibold pt-3'>Years of Experienced</p>
                   </div>
@@ -64,7 +64,7 @@ const About = () => {
                 <div className="counter-wrap">
                   <div className="text">
                     <span className="d-block number gradient-text text-2xl md:text-4xl font-semibold">
-                      <CountUp start={inView ? 0 : null} end={210000} duration={2} delay={1} separator="," />
+                      <CountUp start={inView ? 0 : null} end={2100} duration={2} delay={1} separator="," />
                     </span>
                     <p className='uppercase text-xs md:text-sm text-primary font-semibold pt-3'>Total Properties</p>
                   </div>
@@ -72,19 +72,19 @@ const About = () => {
                 <div className="counter-wrap">
                   <div className="text">
                     <span className="d-block number gradient-text text-2xl md:text-4xl font-semibold">
-                      <CountUp start={inView ? 0 : null} end={450} duration={2} delay={1} />
+                      <CountUp start={inView ? 0 : null} end={45} duration={2} delay={1} />
                     </span>
                     <p className='uppercase text-xs md:text-sm text-primary font-semibold pt-3'>Qualified Realtors</p>
                   </div>
                 </div>
-                <div className="counter-wrap">
+                {/* <div className="counter-wrap">
                   <div className="text">
                     <span className="d-block number gradient-text text-2xl md:text-4xl font-semibold">
                       <CountUp start={inView ? 0 : null} end={100} duration={2} delay={1} />
                     </span>
                     <p className='uppercase text-xs md:text-sm text-primary font-semibold pt-3'>Total Branches</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </motion.div>
             <motion.div
