@@ -44,7 +44,7 @@ const About = () => {
               <span className="subheading uppercase font-bold mb-4 text-xs md:text-sm text-primary">About Us</span>
               <h2 className="my-4 text-3xl md:text-5xl font-semibold text-secondary"><span className='bg-primary text-white rounded-full py-2 px-6'>BIN SHABEERAN</span></h2>
               <h2 className='my-4 text-3xl md:text-5xl font-semibold text-secondary'>The Real Estate and Property consultant</h2>
-              <p className="mb-6 text-secondary leading-7 text-sm md:text-base">Welcome to BIN SHABEERAN - your trusted real estate and property consultancy with 18 years of experience. Our dedicated team offers personalized service and expert guidance to help you navigate the real estate market with confidence. Whether buying, selling, or renting, we&apos;re here to make your real estate journey seamless and successful. Discover why clients trust BIN SHABEERAN for their real estate needs today.</p>
+              <p className="mb-6 text-secondary leading-7 text-sm md:text-base">Welcome to BIN SHABEERAN - your trusted real estate and property consultancy with 30 years of experience. Our dedicated team offers personalized service and expert guidance to help you navigate the real estate market with confidence. Whether buying, selling, or renting, we&apos;re here to make your real estate journey seamless and successful. Discover why clients trust BIN SHABEERAN for their real estate needs today.</p>
             </motion.div>
             <motion.div
               className="grid grid-cols-1 gap-5 md:grid-cols-1 py-8"
@@ -52,7 +52,7 @@ const About = () => {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
             >
-              <div className='flex flex-wrap justify-around'>
+              {/* <div className='flex flex-wrap justify-around'>
                 <div className="counter-wrap">
                   <div className="text">
                     <span className="d-block number gradient-text text-2xl md:text-4xl font-semibold">
@@ -77,15 +77,15 @@ const About = () => {
                     <p className='uppercase text-xs md:text-sm text-primary font-semibold pt-3'>Qualified Realtors</p>
                   </div>
                 </div>
-                {/* <div className="counter-wrap">
+                <div className="counter-wrap">
                   <div className="text">
                     <span className="d-block number gradient-text text-2xl md:text-4xl font-semibold">
                       <CountUp start={inView ? 0 : null} end={100} duration={2} delay={1} />
                     </span>
                     <p className='uppercase text-xs md:text-sm text-primary font-semibold pt-3'>Total Branches</p>
                   </div>
-                </div> */}
-              </div>
+                </div>
+              </div> */}
             </motion.div>
             <motion.div
               className="img img-2 mt-8 w-full h-64 md:h-96 bg-cover"
